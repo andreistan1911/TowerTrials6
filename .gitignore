@@ -50,6 +50,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.cs.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -63,4 +64,5 @@ crashlytics-build.properties
 
 # User Settings, because those should be only local
 UserSettings/
+UserSettings/Layouts/
 
