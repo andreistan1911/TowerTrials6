@@ -16,7 +16,7 @@ public class EnemyHealthBar : MonoBehaviour
         Vector3 directionToEnemy = (transform.position - player.position).normalized;
         float angle = Vector3.Angle(player.forward, directionToEnemy);
 
-        if (angle <  Global.viewAngle)
+        if (angle <  Global.VIEW_ANGLE)
             healthBar.SetActive(true);
         else
             healthBar.SetActive(false);

@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
 
         _agent.speed = _stats.speed;
 
-        _lastReactionTime = -Global.reactionCooldown;
+        _lastReactionTime = -Global.REACTION_COOLDOWN;
     }
 
     private void Update()
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
         if (status != Global.Element.None && element == Global.Element.None)
             return; // Nothing to do here
 
-        if (Time.time - _lastReactionTime <= Global.reactionCooldown)
+        if (Time.time - _lastReactionTime <= Global.REACTION_COOLDOWN)
             return; // internal cooldown not passed yet
 
         // Status + Element Handler
@@ -196,12 +196,12 @@ public class Enemy : MonoBehaviour
         // If another status effect is already active, update the total duration and exit
         if (_statusCoroutine != null)
         {
-            _totalStatusDuration = Global.inflictStatusDuration;
+            _totalStatusDuration = Global.INFLICT_STATUS_DURATION;
             yield break;
         }
 
         status = element;
-        _totalStatusDuration = Global.inflictStatusDuration;
+        _totalStatusDuration = Global.INFLICT_STATUS_DURATION;
         _statusCoroutine = StartCoroutine(StatusTimerCoroutine());
 
         yield return _statusCoroutine;
@@ -219,9 +219,9 @@ public class Enemy : MonoBehaviour
             yield return null;
         }
 
-        if (_totalStatusDuration > Global.inflictStatusDuration)
+        if (_totalStatusDuration > Global.INFLICT_STATUS_DURATION)
         {
-            _totalStatusDuration -= Global.inflictStatusDuration;
+            _totalStatusDuration -= Global.INFLICT_STATUS_DURATION;
             _statusCoroutine = StartCoroutine(StatusTimerCoroutine());
         }
     }

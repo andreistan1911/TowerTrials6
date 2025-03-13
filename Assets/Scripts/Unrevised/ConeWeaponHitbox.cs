@@ -11,7 +11,7 @@ public class ConeWeaponHitbox : MonoBehaviour
 
     private void Start()
     {
-        _dpt = transform.parent.GetComponent<ConeWeapon>().dps / Global.dpsTicks;
+        _dpt = transform.parent.GetComponent<ConeWeapon>().dps / Global.DPS_TICKS;
         _element = transform.parent.GetComponent<ConeWeapon>().element;
 
 
