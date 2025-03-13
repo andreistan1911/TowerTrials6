@@ -26,9 +26,15 @@ public class Global : ScriptableObject
         None,
         Fire,
         Lightning,
+        Water,
+
         Nature,
-        Poison,
-        Water
+        Poison //TODO: BE REMOVED
+    }
+
+    public enum EnemyType
+    {
+        
     }
 
     private void Awake()
