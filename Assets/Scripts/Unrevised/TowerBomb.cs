@@ -42,14 +42,12 @@ public class TowerBomb : Tower
         bomb.Damage = damage;
         bomb.Element = element;
         bomb.Height = launchHeight;
-        bomb.BuffCode &= _buffCode;
     }
 
     override public void Fire(Enemy enemy)
     {
         if (Time.time - _lastFire >= attackRate)
         {
-            UpdateBuffState();
             Fire(enemy.transform.Find("ShootRoot").gameObject);
             _lastFire = Time.time;
         }

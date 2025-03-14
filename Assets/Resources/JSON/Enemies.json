@@ -1,0 +1,14 @@
+{
+  "enemy": [
+    {
+      "type": "Slime",
+      "health": 80.0,
+      "speed": 2.5
+    },
+    {
+      "type": "Goblin",
+      "health": 100.0,
+      "speed": 3.0
+    }
+  ]
+}

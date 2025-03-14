@@ -12,6 +12,6 @@ public class Explosion : SourceOfDamage
 
         Enemy enemy = other.gameObject.GetComponent<Enemy>();
 
-        enemy.TakeDamage(_damage, _element, _buffCode);
+        enemy.TakeDamage(_damage, _element);
     }
 }
