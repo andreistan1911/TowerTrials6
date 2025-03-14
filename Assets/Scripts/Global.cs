@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Global : MonoBehaviour
+public class Global : ScriptableObject
 {
     public static Dictionary<string, EnemyStats> enemyValues = new();
     public static Dictionary<Element, Dictionary<Element, ReactionStats>> reactionValues = new();
 
-    public static float inflictStatusDuration = 1.0f;
-    public static float reactionCooldown = 1.0f;
-    public static int dpsTicks = 4;
+    public const float INFLICT_STATUS_DURATION = 1.0f;
+    public const float REACTION_COOLDOWN = 1.0f;
+    public const int DPS_TICKS = 4;
     public static float dpsCooldown;
 
     public static float g = 9.81f;
@@ -19,16 +19,22 @@ public class Global : MonoBehaviour
     public const int BUFF_SLOW = 1;
     public const int BUFF_SHRED = 2;
 
-    public const float viewAngle = 10f;
+    public const float VIEW_ANGLE = 10f;
 
     public enum Element
     {
         None,
         Fire,
         Lightning,
+        Water,
+
         Nature,
-        Poison,
-        Water
+        Poison //TODO: BE REMOVED
+    }
+
+    public enum EnemyType
+    {
+        
     }
 
     private void Awake()
@@ -38,6 +44,6 @@ public class Global : MonoBehaviour
 
     private static float ComputeDpsCooldown()
     {
-        return 1.0f / dpsTicks;
+        return 1.0f / DPS_TICKS;
     }
 }
