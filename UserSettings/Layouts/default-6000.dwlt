@@ -338,9 +338,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 770
     width: 1305
     height: 264
+=======
+    y: 663.2
+    width: 1658.2
+    height: 347.60004
+>>>>>>> origin/main
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -379,10 +385,28 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 52e80200
     m_LastClickedID: 190546
     m_ExpandedIDs: 000000001aaf000002b1000006b100000ab1000084e00000a0e900000ef100004ef20000e4f3000080f60000a4f800000efb0000ec330100f033010000ca9a3b
+=======
+<<<<<<< Updated upstream
+    scrollPos: {x: 0, y: 88.39996}
+    m_SelectedIDs: dce20000
+    m_LastClickedID: 58076
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000fcc40000fec4000000c5000002c5000004c5000006c5000008c50000
+=======
+    m_ExpandedIDs: 00000000fcc40000fec4000000c5000002c5000004c5000006c5000008c50000d4e2000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 45}
+    m_SelectedIDs: 32b20000
+    m_LastClickedID: 45618
+    m_ExpandedIDs: 000000001aaf0000
+>>>>>>> Stashed changes
+>>>>>>> origin/main
+>>>>>>> origin/main
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,10 +514,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1306
     y: 79
     width: 613
     height: 955
+=======
+    x: 1660.2
+    y: 24
+    width: 387.80005
+    height: 986.80005
+>>>>>>> origin/main
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -540,9 +571,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 79
     width: 323
     height: 665
+=======
+    y: 24
+    width: 407
+    height: 613.2
+>>>>>>> origin/main
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -605,10 +642,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 324
     y: 79
     width: 980
     height: 665
+=======
+    x: 409
+    y: 24
+    width: 1249.2
+    height: 613.2
+>>>>>>> origin/main
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1151,7 +1195,11 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -15.091446, y: -9.668774, z: 18.43264}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -15.091446, y: -9.668774, z: 18.43264}
+=======
+    m_Value: {x: 24.709045, y: 0.8274971, z: 5.185137}
+>>>>>>> origin/main
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1199,11 +1247,19 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.3107801, y: -0.28467795, z: 0.09775233, w: 0.9016864}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: 0.31074598, y: -0.2846467, z: 0.097741604, w: 0.90158737}
+=======
+    m_Value: {x: -0.30097532, y: 0.022103956, z: -0.004783095, w: -0.9544979}
+>>>>>>> origin/main
   m_Size:
     m_Target: 9.299655
     speed: 2
+<<<<<<< HEAD
     m_Value: 9.299655
+=======
+    m_Value: 1.5734701
+>>>>>>> origin/main
   m_Ortho:
     m_Target: 0
     speed: 2
