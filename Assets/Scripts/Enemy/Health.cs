@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
 
-        //TODO: handle elements
+        //Debug.Log("Dealt " + damage + " damage");
 
         if (currentHealth <= 0)
         {
@@ -29,7 +29,6 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        // Dummy event test
         if (Input.GetKeyDown(KeyCode.F))
         {
             TakeDamage(5);

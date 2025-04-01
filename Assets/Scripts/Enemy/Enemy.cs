@@ -8,10 +8,13 @@ public class Enemy : MonoBehaviour
     public Global.EnemyType type;
     public Global.Element status;
 
+    [Tooltip("NavMesh Waypoints")]
+    public Waypoint[] waypoints = { };
+
     [HideInInspector]
     public EnemyStats stats;
 
-    private Walkable walkable;
+    //
 
     private Coroutine slowCoroutine;
     private float totalSlowDuration;
@@ -23,23 +26,34 @@ public class Enemy : MonoBehaviour
 
     private float lastReactionTime;
 
+    private NavMeshAgent agent;
+    private int currentWaypoint = 0;
+
+    private Health health;
+
     private void Start()
     {
         stats = new(Global.enemyValues[type]);
-        walkable = GetComponent<Walkable>();
+
+        health = GetComponent<Health>();
+        health.maxHealth = stats.health;
 
         vfxManager = FindFirstObjectByType<VFXManager>();
         vfxRoot = transform.Find("VFXroot").gameObject;
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = stats.speed;
 
         if (vfxRoot == null)
             Debug.LogError(name + " has no VFXroot!");
 
         lastReactionTime = -Global.REACTION_COOLDOWN;
     }
+    
 
     private void Update()
     {
-        // NOOP
+        FollowRoute();
     }
 
     public void TakeDamage(float damage, Global.Element element)
@@ -50,15 +64,31 @@ public class Enemy : MonoBehaviour
 
     private void HandleDamage(float damage)
     {
-        //print("Dealt " + damage + " damage");
-        stats.health -= damage;
+        health.TakeDamage(damage);
+    }
 
-        if (stats.health <= 0)
+    #region Walk
+    private void FollowRoute()
+    {
+        if (waypoints.Length == 0)
+            return;
+
+        //print(currentWaypoint);
+        agent.SetDestination(waypoints[currentWaypoint].transform.position);
+
+        float distance = Vector3.Distance(waypoints[currentWaypoint].transform.position, transform.position);
+
+        if (distance < 0.7)
         {
-            // TODO: death animation
-            Destroy(gameObject);
+            if (currentWaypoint >= waypoints.Length - 1)
+            {
+                currentWaypoint = -1;
+            }
+
+            currentWaypoint++;
         }
     }
+    #endregion
 
     #region ReactionHandler
     private void HandleElement(Global.Element element)
@@ -181,12 +211,12 @@ public class Enemy : MonoBehaviour
         }
 
         totalSlowDuration = slowDuration;
-        walkable.agent.speed = stats.speed * (1 - slowValue);
+        agent.speed = stats.speed * (1 - slowValue);
         slowCoroutine = StartCoroutine(SlowTimerCoroutine(slowDuration));
 
         yield return slowCoroutine;
 
-        walkable.agent.speed = stats.speed;
+        agent.speed = stats.speed;
         slowCoroutine = null;
     }
 
