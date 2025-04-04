@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 345122629}
   - component: {fileID: 345122632}
   - component: {fileID: 345122633}
+  - component: {fileID: 345122634}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -495,6 +496,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 345122634}
+        m_TargetAssemblyTypeName: LockCursorOnClick, Assembly-CSharp
+        m_MethodName: LockCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &345122630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9080cc3eed5d55b49b0c8eec082b2fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: DevScene
+  sceneName: Tower_placement
 --- !u!114 &345122633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +574,18 @@ MonoBehaviour:
   myButton: {fileID: 345122629}
   audioSource: {fileID: 161145244}
   clickSound: {fileID: 8300000, guid: 236caead7017e8e47bd7f85a16a3e681, type: 3}
+--- !u!114 &345122634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345122627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b2783ead807aa4e852fc7a0f87ad32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &413412077
 GameObject:
   m_ObjectHideFlags: 0
