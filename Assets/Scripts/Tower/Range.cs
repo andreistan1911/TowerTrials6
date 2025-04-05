@@ -17,7 +17,10 @@ public class Range : MonoBehaviour
         if (tower == null)
         {
             Debug.Log("Error: tower not found from range");
+            return;
         }
+
+        tower.range = this;
     }
 
     private void Update()

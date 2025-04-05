@@ -447,7 +447,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31411295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9080cc3eed5d55b49b0c8eec082b2fcd, type: 3}
+  m_Script: {fileID: 11500000, guid: d801482bfb8da5242a9d8878b297f821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StoryMenu
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31411295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c21fa08e82e884cbb4174380650bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 862213cf5d92e064eab303530707dcad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myButton: {fileID: 31411298}
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 95919241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c21fa08e82e884cbb4174380650bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 862213cf5d92e064eab303530707dcad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myButton: {fileID: 95919243}
@@ -1236,7 +1236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &834936959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1249481989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9080cc3eed5d55b49b0c8eec082b2fcd, type: 3}
+  m_Script: {fileID: 11500000, guid: d801482bfb8da5242a9d8878b297f821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: DevScene
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1249481989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c21fa08e82e884cbb4174380650bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 862213cf5d92e064eab303530707dcad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myButton: {fileID: 1249481991}

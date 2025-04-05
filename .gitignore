@@ -62,8 +62,3 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# User Settings, because those should be only local
-UserSettings/
-UserSettings/Layouts/
-UserSettings/Layouts/default-6000.dwlt
-

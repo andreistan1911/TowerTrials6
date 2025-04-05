@@ -12,6 +12,9 @@ public abstract class Tower : MonoBehaviour
     [Tooltip("Tower element")]
     public Global.Element element;
 
+    [HideInInspector]
+    public Range range;
+
     public void Start()
     {
         Assert.AreNotEqual(0, attackRate);
