@@ -2,23 +2,21 @@ using UnityEngine;
 
 public class TowerPlacementSphere : MonoBehaviour
 {
-    public Tower tower; //TODO: SHOULD REPLACE WITH INSTANCIATING PREFABS INSTEAD
+    //[HideInInspector]
+    public Tower tower;
 
-    private TowerPurchaseMenu menu;
-
-    private void Awake()
+    private void Start()
     {
-        menu = FindFirstObjectByType<TowerPurchaseMenu>();
-        menu.gameObject.SetActive(false);
+        tower = null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (menu != null)
+        if (TowerPurchaseMenu.Instance != null)
         {
-            menu.gameObject.SetActive(true);
-            menu.towerToBuild = tower;
-            menu.purchaseZone = gameObject;
+            TowerPurchaseMenu.Instance.gameObject.SetActive(true);
+            TowerPurchaseMenu.Instance.SetPositionToBuild(transform.parent.position);
+            TowerPurchaseMenu.Instance.purchaseSphere = this;
         }
 
         // Show and unlock the cursor
@@ -28,8 +26,11 @@ public class TowerPlacementSphere : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (menu != null)
-            menu.gameObject.SetActive(false);
+        if (TowerPurchaseMenu.Instance != null)
+        {
+            TowerPurchaseMenu.Instance.ResetSelections();
+            TowerPurchaseMenu.Instance.gameObject.SetActive(false);
+        }
 
         // Hide and lock the cursor
         Cursor.lockState = CursorLockMode.Locked;

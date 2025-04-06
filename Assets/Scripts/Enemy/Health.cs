@@ -2,19 +2,15 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 100;
-    public float currentHealth;
+    [HideInInspector]
+    public float maxHealth;
 
-    private void Start()
-    {
-        currentHealth = maxHealth;
-    }
+    [HideInInspector]
+    public float currentHealth;
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-
-        //Debug.Log("Dealt " + damage + " damage");
 
         if (currentHealth <= 0)
         {

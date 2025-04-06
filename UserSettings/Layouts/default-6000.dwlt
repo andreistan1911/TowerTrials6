@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 355
     height: 717
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 1098
     height: 717
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 12}
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 467
     height: 981
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -3.3582814, y: 1.8894567, z: -7.404127}
+    m_Target: {x: -0.9627528, y: 3.1607907, z: 3.8791568}
     speed: 2
     m_Value: {x: -3.3582814, y: 1.8894567, z: -7.404127}
   m_RenderMode: 0
@@ -893,9 +893,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.21796414, y: -0.26390487, z: 0.06111964, w: 0.9377896}
+    m_Target: {x: 0.021251887, y: -0.095631555, z: 0.001658313, w: 0.9953593}
     speed: 2
-    m_Value: {x: 0.2179272, y: -0.26386014, z: 0.06110928, w: 0.93763065}
+    m_Value: {x: -0.21796413, y: 0.26390487, z: -0.061119635, w: -0.9377896}
   m_Size:
     m_Target: 1.2247449
     speed: 2
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 354
     height: 691
   m_SerializedDataModeController:
@@ -968,9 +968,9 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 120}
-      m_SelectedIDs: 6a04ffff
-      m_LastClickedID: -64406
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: c833feffce33feff9437feff9837feffec61feff9866feffe269feff5c74feff0e75feff4280feff6e8cfeff1ac0feff1cc0feff6a04ffff9004ffffb004ffffb404ffffca1dffff3428ffffcc39ffff1a40ffff5e43ffff6c4affff864dffff105bffff366dffffe48afffff88affff929dffffd0afffff1cd3fffff8f9ffffd2f00000123b01006c630100a66301001a6b01004e6b0100266c01001a7501000c7601001e760100227601002a7f0100647f0100b27f0100d87f0100f47f01001c800100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1017,8 +1017,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 355
-    y: 79
+    x: 356
+    y: 24
     width: 1096
     height: 691
   m_SerializedDataModeController:
@@ -1162,7 +1162,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 614}
     m_SelectedIDs: daee0000
     m_LastClickedID: 61146
-    m_ExpandedIDs: 000000002ed1000030d1000032d1000034d1000036d1000038d100003ad100003cd100003ed1000040d1000042d1000044d1000046d1000048d100009eee0000caee000000ca9a3b
+    m_ExpandedIDs: 0000000066ef000068ef00006aef00006cef00006eef000070ef000072ef000074ef000076ef000078ef00007aef00007cef00007eef000080ef0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1191,7 +1191,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002ed1000030d1000032d1000034d1000036d1000038d100003ad100003cd100003ed1000040d1000042d1000044d1000046d1000048d10000
+    m_ExpandedIDs: 0000000066ef000068ef00006aef00006cef00006eef000070ef000072ef000074ef000076ef000078ef00007aef00007cef00007eef000080ef0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 796
+    y: 741
     width: 1452
     height: 238
   m_SerializedDataModeController:
@@ -1306,8 +1306,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1453
-    y: 79
+    x: 1454
+    y: 24
     width: 466
     height: 955
   m_SerializedDataModeController:

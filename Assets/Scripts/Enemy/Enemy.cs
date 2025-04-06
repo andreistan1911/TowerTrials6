@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
 
         health = GetComponent<Health>();
         health.maxHealth = stats.health;
+        health.currentHealth = health.maxHealth;
 
         vfxManager = FindFirstObjectByType<VFXManager>();
         vfxRoot = transform.Find("VFXroot").gameObject;

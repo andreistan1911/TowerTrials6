@@ -19,7 +19,6 @@ public class VFXManager : MonoBehaviour
 
     public void PlayFW(GameObject obj)
     {
-        Debug.Log("Play vape");
         Play(obj, FW);
     }
 

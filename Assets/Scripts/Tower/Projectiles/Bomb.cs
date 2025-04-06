@@ -80,11 +80,11 @@ public class Bomb : Projectile
          * */
 
 
-        float _deltaHeightDown;
-        float _timeTotal, _timeAscend, _timeHeightDiff;
+        float deltaHeightDown;
+        float timeTotal, timeAscend, timeHeightDiff;
 
         direction = target.position - transform.position;
-        _deltaHeightDown = Mathf.Abs(direction.y);
+        deltaHeightDown = Mathf.Abs(direction.y);
         direction.y = transform.position.y + height;
 
         heightInitial = transform.position.y;
@@ -92,12 +92,12 @@ public class Bomb : Projectile
         velocityYInitial = Mathf.Sqrt(2 * Global.g * height);
         velocityYInitialSquared = velocityYInitial * velocityYInitial;
 
-        _timeAscend = velocityYInitial / Global.g;
-        _timeHeightDiff = (Mathf.Sqrt(2 * Global.g * _deltaHeightDown + velocityYInitialSquared) - velocityYInitial) / Global.g;
-        _timeTotal = 2 * _timeAscend + _timeHeightDiff;
+        timeAscend = velocityYInitial / Global.g;
+        timeHeightDiff = (Mathf.Sqrt(2 * Global.g * deltaHeightDown + velocityYInitialSquared) - velocityYInitial) / Global.g;
+        timeTotal = 2 * timeAscend + timeHeightDiff;
 
-        velocity.x = direction.x / _timeTotal;
-        velocity.z = direction.z / _timeTotal;
+        velocity.x = direction.x / timeTotal;
+        velocity.z = direction.z / timeTotal;
     }
 
     private void Update()

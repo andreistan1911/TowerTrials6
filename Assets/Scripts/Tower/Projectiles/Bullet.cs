@@ -5,7 +5,6 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class Bullet : Projectile
 {
-
     private void Update()
     {
         FollowTarget();

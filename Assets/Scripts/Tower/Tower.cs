@@ -15,6 +15,9 @@ public abstract class Tower : MonoBehaviour
     [HideInInspector]
     public Range range;
 
+    [HideInInspector]
+    public int cost;
+
     public void Start()
     {
         Assert.AreNotEqual(0, attackRate);
