@@ -807,11 +807,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 784307465}
-  - {fileID: 1564078391}
+  - {fileID: 1472194256}
   - {fileID: 499784848}
   - {fileID: 258366284}
   - {fileID: 1756467195}
-  - {fileID: 1472194256}
+  - {fileID: 1564078391}
   m_Father: {fileID: 1641320775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5851,7 +5851,7 @@ GameObject:
   - component: {fileID: 1472194258}
   - component: {fileID: 1472194257}
   m_Layer: 5
-  m_Name: Tower Name
+  m_Name: Tower Selected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

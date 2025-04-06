@@ -12,6 +12,8 @@ public class TowerPurchaseMenu : MonoBehaviour
     public Image dmgBar, rangeBar, atkSpeedBar;
     public Image selectedElementImage;
     public TextMeshProUGUI selectedTypeText;
+
+    [HideInInspector]
     public TowerPlacementSphere purchaseSphere;
 
     private const int NONE = 0;
@@ -169,10 +171,17 @@ public class TowerPurchaseMenu : MonoBehaviour
 
         GameObject towerPrefab = Resources.Load<GameObject>("Prefabs/Towers/Tower" + towerType + towerElement);
         GameObject towerInstance = Instantiate(towerPrefab, positionToBuild, Quaternion.identity);
-        Tower tower = towerInstance.GetComponent<Tower>();
+        Tower tower = towerInstance.GetComponentInChildren<Tower>();
 
         if (purchaseSphere != null)
+        {
+            if (purchaseSphere.tower != null)
+            {
+                Destroy(purchaseSphere.tower.gameObject);
+            }
+
             purchaseSphere.tower = tower;
+        }
 
         // Reset element & type and disable build menu
         ResetSelections();
