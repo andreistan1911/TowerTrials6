@@ -120,6 +120,7 @@ MonoBehaviour:
   attackRate: 0.25
   element: 1
   range: {fileID: 0}
+  cost: 0
 --- !u!1 &1889676578812750232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7484411875429679828, guid: c69d9d538624bb04a9f72bb6c027f94a, type: 3}

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TowerPlacementSphere : MonoBehaviour
 {
-    //[HideInInspector]
+    [HideInInspector]
     public Tower tower;
 
     private void Start()
