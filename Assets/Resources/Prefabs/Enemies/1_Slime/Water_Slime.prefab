@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 7940414250944677977}
   - component: {fileID: 6358984585456239965}
   - component: {fileID: 8801255094437026557}
+  - component: {fileID: 4205511015348110993}
+  - component: {fileID: -721292611064183764}
   m_Layer: 0
   m_Name: Water_Slime
   m_TagString: Untagged
@@ -198,6 +200,38 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4205511015348110993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2668740046686820923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399f52e98b7314442b8cb7e7b551a70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  status: 3
+  waypoints: []
+  stats:
+    health: 0
+    speed: 0
+--- !u!114 &-721292611064183764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2668740046686820923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412fb8aa0e8a6f409b82f8485f3fa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &3421075504105537291
 GameObject:
   m_ObjectHideFlags: 0

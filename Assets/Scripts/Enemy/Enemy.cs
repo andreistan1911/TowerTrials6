@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public Global.Element status;
 
     [Tooltip("NavMesh Waypoints")]
-    public Waypoint[] waypoints = { };
+    public List<Waypoint> waypoints = new();
 
     [HideInInspector]
     public EnemyStats stats;
@@ -49,6 +49,14 @@ public class Enemy : MonoBehaviour
             Debug.LogError(name + " has no VFXroot!");
 
         lastReactionTime = -Global.REACTION_COOLDOWN;
+
+
+
+        if (agent == null)
+            Debug.LogError($"{gameObject.name} is missing NavMeshAgent!");
+
+        if (waypoints == null || waypoints.Count == 0)
+            Debug.LogError($"{gameObject.name} has no waypoints set!");
     }
     
 
@@ -71,7 +79,7 @@ public class Enemy : MonoBehaviour
     #region Walk
     private void FollowRoute()
     {
-        if (waypoints.Length == 0)
+        if (waypoints.Count == 0)
             return;
 
         //print(currentWaypoint);
@@ -81,7 +89,7 @@ public class Enemy : MonoBehaviour
 
         if (distance < 0.7)
         {
-            if (currentWaypoint >= waypoints.Length - 1)
+            if (currentWaypoint >= waypoints.Count - 1)
             {
                 currentWaypoint = -1;
             }

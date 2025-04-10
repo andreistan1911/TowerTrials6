@@ -9,6 +9,11 @@
       "type": "Goblin",
       "health": 100.0,
       "speed": 3.0
+    },
+    {
+      "type": "Wolf",
+      "health": 50.0,
+      "speed": 9.0
     }
   ]
 }

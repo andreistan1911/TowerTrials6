@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 3577472189174919640}
   - component: {fileID: 7073416712130178575}
   - component: {fileID: 8506537639561373441}
+  - component: {fileID: -6372965956296141056}
+  - component: {fileID: 7949683327792645033}
   m_Layer: 0
   m_Name: Fire_Slime
   m_TagString: Untagged
@@ -198,6 +200,38 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-6372965956296141056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470605063274135426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399f52e98b7314442b8cb7e7b551a70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  status: 1
+  waypoints: []
+  stats:
+    health: 0
+    speed: 0
+--- !u!114 &7949683327792645033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470605063274135426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412fb8aa0e8a6f409b82f8485f3fa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &4744409872142065471
 GameObject:
   m_ObjectHideFlags: 0

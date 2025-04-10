@@ -22,12 +22,4 @@ public class Health : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamage(5);
-        }
-    }
 }

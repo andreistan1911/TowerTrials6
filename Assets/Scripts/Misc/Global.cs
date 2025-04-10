@@ -10,6 +10,7 @@ public class Global : ScriptableObject
     public const float INFLICT_STATUS_DURATION = 1.0f;
     public const float REACTION_COOLDOWN = 1.0f;
     public const int DPS_TICKS = 4;
+    public const int MAX_WAVES = 7;
     public static float dpsCooldown;
 
     public static float g = 9.81f;
@@ -28,13 +29,13 @@ public class Global : ScriptableObject
     public enum EnemyType
     {
         Slime,
-        Goblin,
         Wolf,
+        Goblin,
         Dragon,
         Skeleton,
         Viking,
-        Giant,
-        Demon
+        Demon,
+        Giant
     }
 
     private void Awake()

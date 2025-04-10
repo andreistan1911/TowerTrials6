@@ -4,10 +4,9 @@ using TMPro;
 
 public class TowerPurchaseMenu : MonoBehaviour
 {
-    public Button fireButton, lightningButton, waterButton;
+    public Button elementlessButton, fireButton, lightningButton, waterButton;
     public Button aoeButton, bombButton, singleButton, continuousButton;
     public Button confirmButton;
-    public GameObject ShadowingPanel;
 
     public Image dmgBar, rangeBar, atkSpeedBar;
     public Image selectedElementImage;
@@ -17,7 +16,6 @@ public class TowerPurchaseMenu : MonoBehaviour
     public TowerPlacementSphere purchaseSphere;
 
     private const int NONE = 0;
-
     private const int FIRE = 1;
     private const int LIGHTNING = 2;
     private const int WATER = 3;
@@ -28,7 +26,7 @@ public class TowerPurchaseMenu : MonoBehaviour
     private const int CONTINOUS = 7;
 
     private int selectedElement = NONE;
-    private int selectedType = NONE;
+    private int selectedType = SINGLE;
 
     private Vector3 positionToBuild;
 
@@ -47,9 +45,14 @@ public class TowerPurchaseMenu : MonoBehaviour
 
     private void Start()
     {
+        SetBarFill(dmgBar, 0);
+        SetBarFill(rangeBar, 0);
+        SetBarFill(atkSpeedBar, 0);
+
         ResetSelections();
         confirmButton.onClick.AddListener(BuildTower);
 
+        elementlessButton.onClick.AddListener(() => SelectElement(NONE));
         fireButton.onClick.AddListener(() => SelectElement(FIRE));
         lightningButton.onClick.AddListener(() => SelectElement(LIGHTNING));
         waterButton.onClick.AddListener(() => SelectElement(WATER));
@@ -66,7 +69,6 @@ public class TowerPurchaseMenu : MonoBehaviour
     {
         selectedElement = element;
         UpdateStatsDisplay();
-        UpdateConfirmButtonState();
         UpdateSelectedElement();
     }
 
@@ -74,20 +76,11 @@ public class TowerPurchaseMenu : MonoBehaviour
     {
         selectedType = type;
         UpdateStatsDisplay();
-        UpdateConfirmButtonState();
         UpdateSelectedType();
     }
 
     private void UpdateStatsDisplay()
     {
-        if (selectedElement == NONE || selectedType == NONE)
-        {
-            SetBarFill(dmgBar, 0);
-            SetBarFill(rangeBar, 0);
-            SetBarFill(atkSpeedBar, 0);
-            return;
-        }
-
         float dmg, range, atkSpeed;
 
         dmg = 0.8f; //TODO: SHOULD HAVE ACTUAL DB VALUES
@@ -104,18 +97,14 @@ public class TowerPurchaseMenu : MonoBehaviour
         bar.fillAmount = Mathf.Clamp01(value);
     }
 
-    private void UpdateConfirmButtonState()
-    {
-        bool interactable = selectedElement != NONE && selectedType != NONE;
-
-        confirmButton.interactable = interactable;
-        ShadowingPanel.SetActive(!interactable);
-    }
-
     private void UpdateSelectedElement()
     {
         switch (selectedElement)
         {
+            case NONE:
+                selectedElementImage.sprite = elementlessButton.GetComponent<Image>().sprite;
+                selectedElementImage.color = elementlessButton.GetComponent<Image>().color;
+                break;
             case FIRE:
                 selectedElementImage.sprite = fireButton.GetComponent<Image>().sprite;
                 selectedElementImage.color = fireButton.GetComponent<Image>().color;
@@ -130,8 +119,8 @@ public class TowerPurchaseMenu : MonoBehaviour
                 break;
 
             default:
-                selectedElementImage.sprite = null;
-                selectedElementImage.color = Color.white;
+                selectedElementImage.sprite = elementlessButton.GetComponent<Image>().sprite;
+                selectedElementImage.color = elementlessButton.GetComponent<Image>().color;
                 break;
         }
     }
@@ -154,7 +143,7 @@ public class TowerPurchaseMenu : MonoBehaviour
                 break;
 
             default:
-                selectedTypeText.text = "(no type)";
+                selectedTypeText.text = "Single target";
                 break;
         }
     }
@@ -177,7 +166,7 @@ public class TowerPurchaseMenu : MonoBehaviour
         {
             if (purchaseSphere.tower != null)
             {
-                Destroy(purchaseSphere.tower.gameObject);
+                Destroy(purchaseSphere.tower.gameObject.transform.parent.gameObject);
             }
 
             purchaseSphere.tower = tower;
@@ -191,9 +180,8 @@ public class TowerPurchaseMenu : MonoBehaviour
     public void ResetSelections()
     {
         selectedElement = NONE;
-        selectedType = NONE;
+        selectedType = SINGLE;
         UpdateStatsDisplay();
-        UpdateConfirmButtonState();
         UpdateSelectedElement();
         UpdateSelectedType();
     }
@@ -221,6 +209,8 @@ public class TowerPurchaseMenu : MonoBehaviour
     {
         switch (selectedElement)
         {
+            case NONE:
+                return "None";
             case FIRE:
                 return "Fire";
             case LIGHTNING:

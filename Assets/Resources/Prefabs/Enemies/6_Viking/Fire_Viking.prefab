@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 1626099162656435982}
   - component: {fileID: 7896576809289490983}
   - component: {fileID: 3837685203354313189}
+  - component: {fileID: 140967480601745307}
+  - component: {fileID: -5474684247068872925}
   m_Layer: 0
   m_Name: Fire_Viking
   m_TagString: Untagged
@@ -141,6 +143,38 @@ NavMeshAgent:
   m_BaseOffset: 2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &140967480601745307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4332517025637307182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399f52e98b7314442b8cb7e7b551a70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  status: 1
+  waypoints: []
+  stats:
+    health: 0
+    speed: 0
+--- !u!114 &-5474684247068872925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4332517025637307182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412fb8aa0e8a6f409b82f8485f3fa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &4732714382655679479
 GameObject:
   m_ObjectHideFlags: 0

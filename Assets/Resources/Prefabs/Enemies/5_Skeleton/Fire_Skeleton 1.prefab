@@ -172,6 +172,8 @@ GameObject:
   - component: {fileID: 38605035534557635}
   - component: {fileID: 5180036123258552252}
   - component: {fileID: 8357667436098669509}
+  - component: {fileID: 7339866650747886969}
+  - component: {fileID: 4998549013403709534}
   m_Layer: 0
   m_Name: Fire_Skeleton 1
   m_TagString: Untagged
@@ -272,6 +274,38 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7339866650747886969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180815694364456463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399f52e98b7314442b8cb7e7b551a70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
+  status: 1
+  waypoints: []
+  stats:
+    health: 0
+    speed: 0
+--- !u!114 &4998549013403709534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180815694364456463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412fb8aa0e8a6f409b82f8485f3fa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &333203844786154215
 GameObject:
   m_ObjectHideFlags: 0

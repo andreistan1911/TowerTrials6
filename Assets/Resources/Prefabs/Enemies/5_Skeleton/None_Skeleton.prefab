@@ -172,10 +172,10 @@ GameObject:
   - component: {fileID: 38605035534557635}
   - component: {fileID: 5180036123258552252}
   - component: {fileID: 8357667436098669509}
-  - component: {fileID: -466243621853111341}
-  - component: {fileID: -1384301303255325872}
+  - component: {fileID: 6590005671293036598}
+  - component: {fileID: 213908475521510161}
   m_Layer: 0
-  m_Name: Lightning_Skeleton
+  m_Name: None_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,6 @@ Transform:
   - {fileID: 4615541279029788449}
   - {fileID: 5102156752852424534}
   - {fileID: 3177100002053749485}
-  - {fileID: 7229184544813887671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &38605035534557635
@@ -274,7 +273,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-466243621853111341
+--- !u!114 &6590005671293036598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,12 +286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  status: 2
+  status: 0
   waypoints: []
   stats:
     health: 0
     speed: 0
---- !u!114 &-1384301303255325872
+--- !u!114 &213908475521510161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3620,7 +3619,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9f272698562b39a4997ddebd8561b52b, type: 2}
+  - {fileID: 2100000, guid: 95e54fd93b1322846bf2cb026aaf822b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3876,11 +3875,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2287b73af3d9c1c42ab20942d4198595, type: 2}
-  - {fileID: 2100000, guid: 2287b73af3d9c1c42ab20942d4198595, type: 2}
-  - {fileID: 2100000, guid: 1ddf461de42fb6844a93bed816e287de, type: 2}
-  - {fileID: 2100000, guid: 1ddf461de42fb6844a93bed816e287de, type: 2}
-  - {fileID: 2100000, guid: 1ddf461de42fb6844a93bed816e287de, type: 2}
+  - {fileID: 2100000, guid: b1583d1731180354285d3e2b5260cfe9, type: 2}
+  - {fileID: 2100000, guid: 1a7ac4aed9db1d748a01e88d2f6409d1, type: 2}
+  - {fileID: 2100000, guid: 3046a6a4b322046488c6e9c560e98d5a, type: 2}
+  - {fileID: 2100000, guid: a388aedcfc39e504dbd376c858be570f, type: 2}
+  - {fileID: 2100000, guid: 3046a6a4b322046488c6e9c560e98d5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6912,73 +6911,3 @@ Transform:
   - {fileID: 7370739641207922691}
   m_Father: {fileID: 6314467479454485187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1776835625041405890
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8317624502406976234}
-    m_Modifications:
-    - target: {fileID: 1791349659657670286, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_Name
-      value: Lightning_Aura
-      objectReference: {fileID: 0}
-    - target: {fileID: 7973612778226325559, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: simulationSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7973612778226325559, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.055
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.472
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.112
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5252782
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5252782
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.47337383
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47337383
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
---- !u!4 &7229184544813887671 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9005984966952753013, guid: 56824bfd50a59a249b5ad1d52c4961a7, type: 3}
-  m_PrefabInstance: {fileID: 1776835625041405890}
-  m_PrefabAsset: {fileID: 0}
