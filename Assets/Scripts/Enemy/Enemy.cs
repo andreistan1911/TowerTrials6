@@ -33,74 +33,85 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        stats = new(Global.enemyValues[type]);
-
-        health = GetComponent<Health>();
-        health.maxHealth = stats.health;
-        health.currentHealth = health.maxHealth;
-
-        vfxManager = FindFirstObjectByType<VFXManager>();
-        vfxRoot = transform.Find("VFXroot").gameObject;
-
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = stats.speed;
-
-        if (vfxRoot == null)
-            Debug.LogError(name + " has no VFXroot!");
-
-        lastReactionTime = -Global.REACTION_COOLDOWN;
-
-
-
-        if (agent == null)
-            Debug.LogError($"{gameObject.name} is missing NavMeshAgent!");
-
-        if (waypoints == null || waypoints.Count == 0)
-            Debug.LogError($"{gameObject.name} has no waypoints set!");
+        InitializeComponents();
+        InitializeStats();
+        ValidateSetup();
     }
     
-
     private void Update()
     {
         FollowRoute();
     }
 
-    public void TakeDamage(float damage, Global.Element element)
+    #region Initialization
+    private void InitializeComponents()
     {
-        HandleElement(element);
-        HandleDamage(damage);
+        health = GetComponent<Health>();
+        agent = GetComponent<NavMeshAgent>();
+        vfxManager = FindFirstObjectByType<VFXManager>();
+        vfxRoot = transform.Find("VFXroot").gameObject;
+
+        lastReactionTime = -Global.REACTION_COOLDOWN;
     }
 
-    private void HandleDamage(float damage)
+    private void InitializeStats()
     {
-        health.TakeDamage(damage);
+        stats = new(Global.enemyValues[type]);
+
+        health.maxHealth = stats.health;
+        health.currentHealth = stats.health;
+
+        agent.speed = stats.speed;
     }
 
-    #region Walk
+    private void ValidateSetup()
+    {
+        if (vfxRoot == null)
+            Debug.LogError($"{name} has no VFXroot!");
+
+        if (agent == null)
+            Debug.LogError($"{name} is missing NavMeshAgent!");
+
+        if (waypoints == null || waypoints.Count == 0)
+            Debug.LogError($"{name} has no waypoints set!");
+    }
+    #endregion
+
+    #region Movement
     private void FollowRoute()
     {
         if (waypoints.Count == 0)
             return;
 
-        //print(currentWaypoint);
         agent.SetDestination(waypoints[currentWaypoint].transform.position);
 
         float distance = Vector3.Distance(waypoints[currentWaypoint].transform.position, transform.position);
 
-        if (distance < 0.7)
-        {
-            if (currentWaypoint >= waypoints.Count - 1)
-            {
-                currentWaypoint = -1;
-            }
-
-            currentWaypoint++;
-        }
+        if (distance < 0.7f)
+            currentWaypoint = (currentWaypoint + 1) % waypoints.Count;
     }
     #endregion
 
-    #region ReactionHandler
-    private void HandleElement(Global.Element element)
+    #region Damage Handling
+    public void TakeDamage(float damage, Global.Element element)
+    {
+        HandleElementReaction(element);
+        ApplyDamage(damage);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        ApplyDamage(damage);
+    }
+
+    private void ApplyDamage(float damage)
+    {
+        health.TakeDamage(damage);
+    }
+    #endregion
+
+    #region Reaction System
+    private void HandleElementReaction(Global.Element element)
     {
         if (status == element || (status == Global.Element.None && element != Global.Element.None))
         {
@@ -115,55 +126,62 @@ public class Enemy : MonoBehaviour
         if (Time.time - lastReactionTime <= Global.REACTION_COOLDOWN)
             return; // internal cooldown not passed yet
 
+        ReactionStats reaction = Global.reactionValues[status][element];
+
         // Status + Element Handler
-        HandleDamage(Global.reactionValues[status][element].damage);
-        ApplySlow(
-            Global.reactionValues[status][element].slowValue,
-            Global.reactionValues[status][element].slowDuration);
-        HandleReaction(element);
+        ApplyDamage(reaction.damage);
+        ApplySlow(reaction.slowValue, reaction.slowDuration);
+        ApplyReactionEffect(element);
 
         lastReactionTime = Time.time;
     }
 
-    private void HandleReaction(Global.Element element)
+    private void ApplyReactionEffect(Global.Element element)
     {
-        if (Global.reactionValues[status][element].displayName == "Pyrus Voltes")
+        string reactionName = Global.reactionValues[status][element].displayName;
+
+        switch (reactionName)
         {
-            // TODO
-            return;
+            case "Pyrus Voltes":
+                vfxManager.PlayFL(vfxRoot);
+                AffectNearbyEnemies(Global.reactionValues[Global.Element.Fire][Global.Element.Lightning], 3f);
+                break;
+
+            case "Pyrus Aquas":
+                vfxManager.PlayFW(vfxRoot);
+                break;
+
+            case "Aquas Voltes":
+                vfxManager.PlayLW(vfxRoot);
+                AffectNearbyEnemies(Global.reactionValues[Global.Element.Water][Global.Element.Lightning], 3f);
+                break;
+
+            default:
+                Debug.LogError($"Unknown reaction effect: {reactionName}");
+                break;
         }
-
-        if (Global.reactionValues[status][element].displayName == "Pyrus Aquas")
-        {
-            vfxManager.PlayFW(vfxRoot);
-            return;
-        }
-
-        if (Global.reactionValues[status][element].displayName == "Aquas Voltes")
-        {
-            vfxManager.PlayLW(vfxRoot);
-
-            Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
-
-            // VALUE SHOULD BE MODIFIED FOR BALANCING !!!
-            float stunRadius = 3;
-            foreach (Enemy enemy in enemies)
-            {
-                if (Vector3.Distance(enemy.transform.position, transform.position) <= stunRadius)
-                    enemy.ApplySlow(
-                        Global.reactionValues[Global.Element.Lightning][Global.Element.Water].slowValue,
-                        Global.reactionValues[Global.Element.Lightning][Global.Element.Water].slowDuration);
-            }
-            return;
-        }
-        
-        Debug.LogError("Undefined reaction!");
-        print(status + " + " + element);
     }
 
+    private void AffectNearbyEnemies(ReactionStats reaction, float radius)
+    {
+        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+
+        foreach (Enemy enemy in enemies)
+        {
+            if (enemy == this) continue;
+
+            float dist = Vector3.Distance(enemy.transform.position, transform.position);
+
+            if (dist <= radius)
+            {
+                enemy.TakeDamage(reaction.damage);
+                enemy.ApplySlow(reaction.slowValue, reaction.slowDuration);
+            }
+        }
+    }
     #endregion
 
-    #region StatusAndSlow
+    #region Status & Slow System
     private void ApplySlow(float slowValue, float slowDuration)
     {
         // IT WORKS, DON'T ASK HOW
