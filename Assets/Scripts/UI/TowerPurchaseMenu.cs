@@ -127,25 +127,14 @@ public class TowerPurchaseMenu : MonoBehaviour
 
     private void UpdateSelectedType()
     {
-        switch (selectedType)
+        selectedTypeText.text = selectedType switch
         {
-            case AOE:
-                selectedTypeText.text = "Aoe";
-                break;
-            case BOMB:
-                selectedTypeText.text = "Bomb";
-                break;
-            case SINGLE:
-                selectedTypeText.text = "Single target";
-                break;
-            case CONTINOUS:
-                selectedTypeText.text = "Laser";
-                break;
-
-            default:
-                selectedTypeText.text = "Single target";
-                break;
-        }
+            AOE => "Aoe",
+            BOMB => "Bomb",
+            SINGLE => "Single target",
+            CONTINOUS => "Laser",
+            _ => "Single target",
+        };
     }
 
     public void BuildTower()

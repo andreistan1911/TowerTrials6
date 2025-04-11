@@ -21,7 +21,7 @@ public class Bullet : Projectile
             return;
 
         direction = (target.position - transform.position).normalized;
-        transform.position += speed * direction * Time.deltaTime;
+        transform.position += speed * Time.deltaTime * direction;
     }
 
     private void OnCollisionEnter(Collision collision)

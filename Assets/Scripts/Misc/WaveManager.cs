@@ -28,7 +28,7 @@ public class WaveManager : MonoBehaviour
     public GameObject waypointsCollection;
     public float timeBetweenSpawns = 1f;
 
-    private List<Waypoint> waypoints = new();
+    private readonly List<Waypoint> waypoints = new();
 
     public static Dictionary<Global.EnemyType, int> baseCosts = new()
     {
