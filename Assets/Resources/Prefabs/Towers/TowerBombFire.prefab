@@ -273,7 +273,7 @@ MonoBehaviour:
   range: {fileID: 0}
   cost: 0
   launchHeight: 2.5
-  bombPrefab: {fileID: 4878911949201888455, guid: 97132802d16342b4e94facf0b2d19024, type: 3}
+  bombPrefab: {fileID: 4878911949201888455, guid: c3828a86ab8050c47a4eecb20cf2ca3b, type: 3}
 --- !u!4 &8059166159014994069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4545306198249065881, guid: 6c47ac71ee9ff50449236f97cedc3ada, type: 3}

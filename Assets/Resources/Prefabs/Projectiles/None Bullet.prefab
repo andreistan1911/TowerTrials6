@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8799260960910193691}
   - component: {fileID: 4018506439765605642}
   m_Layer: 0
-  m_Name: Lava Bullet
+  m_Name: None Bullet
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8416e5ac4d49f0643ac890d0a9f5023f, type: 2}
+  - {fileID: 2100000, guid: 8ab77cfd6893b4e478a33d2cf46f2552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -4,7 +4,11 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+
     private AudioSource audioSource;
+
+    [Header("Global Click Sound")]
+    public AudioClip clickSound;
 
     void Awake()
     {
@@ -13,30 +17,26 @@ public class AudioManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             audioSource = GetComponent<AudioSource>();
-            SceneManager.sceneLoaded += OnSceneLoaded; 
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public void PlayClickSound()
     {
-        if (scene.name == "DevScene") 
+        if (clickSound != null)
         {
-            audioSource.Stop();
-            Destroy(gameObject); 
+            audioSource.PlayOneShot(clickSound);
         }
     }
 
-    public float GetTime()
+    public void PlaySoundOneShot(AudioClip clip)
     {
-        return audioSource.time;
-    }
-
-    public void SetTime(float time)
-    {
-        audioSource.time = time;
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }

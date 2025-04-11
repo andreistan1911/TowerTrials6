@@ -278,4 +278,4 @@ MonoBehaviour:
   range: {fileID: 0}
   cost: 0
   bulletSpeed: 10
-  bulletPrefab: {fileID: 8099632575411566864, guid: b79833152906a654cb77b3ac84147c4a, type: 3}
+  bulletPrefab: {fileID: 8099632575411566864, guid: 5c1ca7de10b356c46a1167c2521775ea, type: 3}

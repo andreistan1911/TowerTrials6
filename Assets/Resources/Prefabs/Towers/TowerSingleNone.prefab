@@ -273,7 +273,7 @@ MonoBehaviour:
   range: {fileID: 0}
   cost: 0
   bulletSpeed: 10
-  bulletPrefab: {fileID: 8099632575411566864, guid: b79833152906a654cb77b3ac84147c4a, type: 3}
+  bulletPrefab: {fileID: 8099632575411566864, guid: 21371dd37c1fba246b1488e9f89a544f, type: 3}
 --- !u!4 &5747701085959775178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4545306198249065881, guid: 4bec302f419e78c49956cecbb7da1982, type: 3}

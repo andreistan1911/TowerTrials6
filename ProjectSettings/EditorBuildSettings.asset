@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tower_placement.unity
     guid: 0eebe6afac918f74ab00eb453a60f779
   - enabled: 1
-    path: Assets/Scenes/Tutorial1.unity
+    path: Assets/Scenes/WeaponTutorial.unity
     guid: 279a7bb123357904a90413371095614c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
