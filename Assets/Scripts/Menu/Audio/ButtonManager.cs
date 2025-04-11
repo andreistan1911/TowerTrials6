@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class ButtonManager : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         // Find all buttons in the scene
-        Button[] buttons = FindObjectsOfType<Button>();
+        Button[] buttons = FindObjectsByType<Button>(FindObjectsSortMode.None);
 
         foreach (Button btn in buttons)
         {
