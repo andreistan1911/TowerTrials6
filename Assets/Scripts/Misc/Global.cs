@@ -38,6 +38,12 @@ public class Global : ScriptableObject
         Giant
     }
 
+    public enum Level
+    {
+        Tutorial,
+        Level_1
+    }
+
     private void Awake()
     {
         dpsCooldown = ComputeDpsCooldown();
