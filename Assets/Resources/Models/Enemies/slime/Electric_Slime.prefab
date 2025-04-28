@@ -5182,8 +5182,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0025092687, y: -0.9998205, z: -0.01845965, w: 0.0034667489}
   m_LocalPosition: {x: -8.773481, y: 0.5085373, z: -2.3565361}
-  m_LocalScale: {x: 2.4124389, y: 2.4124389, z: 2.412439}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3322556669255219020}
   - {fileID: 6459280975223944521}
