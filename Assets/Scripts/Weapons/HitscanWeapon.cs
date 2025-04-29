@@ -30,10 +30,10 @@ public class HitscanWeapon : MonoBehaviour
             Debug.Log("Lovit: " + hit.collider.name);
 
             // Damage
-            Health enemyHealth = hit.collider.GetComponent<Health>();
-            if (enemyHealth != null)
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if (enemy != null)
             {
-                enemyHealth.TakeDamage(damage);
+                enemy.TakeDamage(damage, Global.Element.Lightning);
             }
 
             // Visual effect
@@ -51,9 +51,43 @@ public class HitscanWeapon : MonoBehaviour
         }
     }
 
-    private void ShowLightning(Vector3 targetPoint)
+    /*private void ShowLightning(Vector3 targetPoint)
     {
         beam.SetPosition(1, transform.position);
         beam.SetPosition(1, targetPoint);
+    }*/
+
+    private void ShowLightning(Vector3 targetPoint)
+    {
+        Vector3 startPoint = transform.position;
+        Vector3 direction = (targetPoint - startPoint).normalized;
+        float distance = Vector3.Distance(startPoint, targetPoint);
+        float segmentLength = 0.2f;
+        int segments = Mathf.Max(4, Mathf.RoundToInt(distance / segmentLength));
+        float maxOffset = 0.1f;
+
+        beam.positionCount = segments + 1;
+
+        Vector3 perpendicular = Vector3.Cross(direction, Vector3.up);
+        if (perpendicular == Vector3.zero)
+            perpendicular = Vector3.Cross(direction, Vector3.right);
+
+        for (int i = 0; i <= segments; i++)
+        {
+            float t = (float)i / segments;
+            Vector3 point = Vector3.Lerp(startPoint, targetPoint, t);
+
+            // Doar punctele intermediare au zigzag
+            if (i != 0 && i != segments)
+            {
+                float falloff = Mathf.Sin(t * Mathf.PI);
+                float offset = Random.Range(-maxOffset, maxOffset) * falloff;
+
+                Vector3 offsetDir = Quaternion.AngleAxis(Random.Range(-45f, 45f), direction) * perpendicular;
+                point += offsetDir * offset;
+            }
+
+            beam.SetPosition(i, point);
+        }
     }
 }

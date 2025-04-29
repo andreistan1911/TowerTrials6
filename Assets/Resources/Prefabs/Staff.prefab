@@ -570,8 +570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386ef4f4c1c43ff469d2483fe4aba804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 65.05
-  damage: 1
+  range: 10
+  damage: 0.1
   layersToIgnore:
     serializedVersion: 2
     m_Bits: 8
@@ -652,18 +652,18 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.745283, g: 0, b: 0.44750983, a: 1}
+      key0: {r: 0.5294118, g: 0.4039216, b: 0.6156863, a: 1}
       key1: {r: 1, g: 0.61737454, b: 0, a: 1}
-      key2: {r: 0.9150943, g: 0, b: 0.49037296, a: 1}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0.5294118, g: 0.4039216, b: 0.6156863, a: 1}
+      key3: {r: 0.9150943, g: 0, b: 0.49037296, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 9638
-      ctime1: 24479
-      ctime2: 51272
-      ctime3: 0
+      ctime0: 6168
+      ctime1: 44333
+      ctime2: 65535
+      ctime3: 51272
       ctime4: 0
       ctime5: 0
       ctime6: 0
@@ -676,8 +676,8 @@ LineRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 2
-      m_ColorSpace: -1
+      m_Mode: 0
+      m_ColorSpace: 0
       m_NumColorKeys: 3
       m_NumAlphaKeys: 3
     numCornerVertices: 0

@@ -616,7 +616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &205799537
 Transform:
   m_ObjectHideFlags: 0
@@ -10376,9 +10376,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 6168
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime1
+      value: 44333
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.6156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.4039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.b
+      value: 0.6156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.g
+      value: 0.4039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.r
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982552207951268824, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3699501825054964478, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986599530640495082, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522663103838379519, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5677513319832231067, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10420,9 +10472,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5753884911233594270, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5896435173634458719, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655646366646697883, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676264221523965883, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: damage
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
