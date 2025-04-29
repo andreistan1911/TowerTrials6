@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 9197094334384205880}
   - component: {fileID: 5443695722619914063}
   - component: {fileID: 2197320594470009655}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,6 +214,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2646190618815262879, guid: 580c6d2ef7070d74b91ca47b1d8c02b0, type: 3}
+  - {fileID: 2100000, guid: 5456afa1412d9d341877eac91033d38f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -308,7 +309,7 @@ GameObject:
   - component: {fileID: 653597878909476426}
   - component: {fileID: 7640985705907450686}
   - component: {fileID: 1668096874803077797}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +385,7 @@ GameObject:
   - component: {fileID: 2706821058972572605}
   - component: {fileID: 8681821027951576934}
   - component: {fileID: 2871092153506777839}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +572,7 @@ GameObject:
   - component: {fileID: 5257495936316468184}
   - component: {fileID: 4326698634284886646}
   - component: {fileID: 1242980727445889206}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,6 +650,7 @@ GameObject:
   - component: {fileID: 7372328480055235542}
   - component: {fileID: -3757719195876896061}
   - component: {fileID: 2765681336996521439}
+  - component: {fileID: 5090551266336137490}
   m_Layer: 0
   m_Name: None_Slime
   m_TagString: Untagged
@@ -781,3 +783,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   currentHealth: 0
+--- !u!114 &5090551266336137490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8614413422109695021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d4cd78e28fe3d45b2e60ef061abde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToOutline: {fileID: 8798999392120138796}

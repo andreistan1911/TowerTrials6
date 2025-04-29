@@ -25,10 +25,18 @@ public class Range : MonoBehaviour
 
     private void Update()
     {
+        if (enemyTimers.Count == 0)
+            tower.NoEnemyInRange();
+        else
+            tower.EnemyIsInRange();
+
         foreach (var enemy in enemyTimers.Keys.ToList())
         {
             if (enemy == null)
+            {
+                enemyTimers.Remove(enemy);
                 continue;
+            }
 
             enemyTimers[enemy] += Time.deltaTime;
 

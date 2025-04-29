@@ -9,10 +9,12 @@ public class Shoot : MonoBehaviour
 
     private InputAction clickAction;
     private int currentWeaponNr;
+    private bool isClicking;
 
     private void Awake()
     {
         // Setup click action;
+        isClicking = false;
         clickAction = new InputAction(binding: "<Mouse>/leftButton");
 
         clickAction.started += ctx => OnClickStarted();
@@ -35,6 +37,9 @@ public class Shoot : MonoBehaviour
         {
             currentWeaponNr = 2;
         }
+
+        if (isClicking && currentWeaponNr == 2)
+            weapons[2].GetComponent<HitscanWeapon>().Fire();
     }
 
     private void OnEnable()
@@ -54,13 +59,24 @@ public class Shoot : MonoBehaviour
         if (weapons.Count == 0)
             return;
 
+        isClicking = true;
+
         weapons[currentWeaponNr].SetActive(true);
-        weapons[currentWeaponNr].GetComponent<ParticleSystem>().Play();
+
+        if (currentWeaponNr != 2) // a bit hardcoded but it's fine
+            weapons[currentWeaponNr].GetComponent<ParticleSystem>().Play();
+        else
+            weapons[2].GetComponent<HitscanWeapon>().Fire();
     }
 
     private void OnClickCanceled()
     {
-        StartCoroutine(SetInactiveAfterParticlesFinished(weapons[currentWeaponNr]));
+        isClicking = false;
+
+        if (currentWeaponNr != 2) // a bit hardcoded but it's fine
+            StartCoroutine(SetInactiveAfterParticlesFinished(weapons[currentWeaponNr]));
+        else
+            weapons[2].SetActive(false);
     }
 
     private IEnumerator SetInactiveAfterParticlesFinished(GameObject weapon)
@@ -82,5 +98,4 @@ public class Shoot : MonoBehaviour
         if (timer > remainingDuration)
             weapon.SetActive(false);
     }
-
 }

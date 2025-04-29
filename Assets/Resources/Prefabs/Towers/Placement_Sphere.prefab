@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7778654474444673232}
   - component: {fileID: 8857803098661428224}
   - component: {fileID: 2574871922601434472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Placement_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ffa046ae4ad3047b7dcb8eb50bf649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonToToggle: {fileID: 0}
+  tower: {fileID: 0}

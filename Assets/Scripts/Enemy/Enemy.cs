@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
     private int currentWaypoint = 0;
 
     private Health health;
+    private ElementalOutline outline;
 
     private void Start()
     {
@@ -48,6 +49,7 @@ public class Enemy : MonoBehaviour
     {
         health = GetComponent<Health>();
         agent = GetComponent<NavMeshAgent>();
+        outline = GetComponent<ElementalOutline>();
         vfxManager = FindFirstObjectByType<VFXManager>();
         vfxRoot = transform.Find("VFXroot").gameObject;
 
@@ -207,10 +209,16 @@ public class Enemy : MonoBehaviour
         totalStatusDuration = Global.INFLICT_STATUS_DURATION;
         statusCoroutine = StartCoroutine(StatusTimerCoroutine());
 
+        if (outline != null)
+            outline.SetOutlineElement(status);
+
         yield return statusCoroutine;
 
         status = Global.Element.None;
         statusCoroutine = null;
+
+        if (outline != null)
+            outline.SetOutlineElement(Global.Element.None);
     }
 
     private IEnumerator StatusTimerCoroutine()
