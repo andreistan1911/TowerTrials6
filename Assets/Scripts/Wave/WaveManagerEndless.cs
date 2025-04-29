@@ -15,7 +15,7 @@ public class WaveManagerEndless : AbstractWaveManger
         { Global.EnemyType.Demon,    new List<float> { 0.0f, 0.0f, 0.0f, 0.0f, 0.13f, 0.3f } },
         { Global.EnemyType.Giant,    new List<float> { 0.0f, 0.0f, 0.0f, 0.0f, 0.02f, 0.2f } }
     };
-                                               // dummy,  1,  2,  3,  4,  5
+                                                         // dummy,  1,  2,  3,  4,  5
     private static readonly List<int> baseTargetCosts = new() { 0, 10, 20, 30, 40, 50 };
 
     private void Update()

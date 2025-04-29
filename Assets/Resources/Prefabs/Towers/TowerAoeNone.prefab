@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2183428808719649581}
   - component: {fileID: 2946268606174420350}
   - component: {fileID: 402405335857647033}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,10 +161,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3317929954132473775}
     m_Modifications:
-    - target: {fileID: 2683991220609336529, guid: c69d9d538624bb04a9f72bb6c027f94a, type: 3}
-      propertyPath: m_Name
-      value: Aoe VFX
-      objectReference: {fileID: 0}
     - target: {fileID: 3774011312916666147, guid: dd05f6216a481ed4e852e7f85d56dce7, type: 3}
       propertyPath: m_Name
       value: Default_AOE
@@ -208,6 +204,10 @@ PrefabInstance:
     - target: {fileID: 4545306198249065881, guid: dd05f6216a481ed4e852e7f85d56dce7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683991220609336529, guid: c69d9d538624bb04a9f72bb6c027f94a, type: 3}
+      propertyPath: m_Name
+      value: Aoe VFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
