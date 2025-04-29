@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d801482bfb8da5242a9d8878b297f821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: WeaponTutorial
+  sceneName: WeaponTest
 --- !u!114 &345122633
 MonoBehaviour:
   m_ObjectHideFlags: 0

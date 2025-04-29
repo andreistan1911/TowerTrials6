@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WeaponTutorial.unity
     guid: 279a7bb123357904a90413371095614c
+  - enabled: 1
+    path: Assets/Scenes/WeaponTest.unity
+    guid: 8dcbd0ccfad405f4983af6d1bbf12694
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
