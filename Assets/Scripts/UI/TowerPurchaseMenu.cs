@@ -133,7 +133,7 @@ public class TowerPurchaseMenu : MonoBehaviour
             BOMB => "Bomb",
             SINGLE => "Single target",
             CONTINOUS => "Laser",
-            _ => "Single target",
+            _ => "Single target"
         };
     }
 

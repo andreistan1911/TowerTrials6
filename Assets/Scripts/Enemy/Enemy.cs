@@ -210,7 +210,7 @@ public class Enemy : MonoBehaviour
         statusCoroutine = StartCoroutine(StatusTimerCoroutine());
 
         if (outline != null)
-            outline.SetOutlineElement(status);
+            outline.SetHpBarColor(status);
 
         yield return statusCoroutine;
 
@@ -218,7 +218,7 @@ public class Enemy : MonoBehaviour
         statusCoroutine = null;
 
         if (outline != null)
-            outline.SetOutlineElement(Global.Element.None);
+            outline.SetHpBarColor(Global.Element.None);
     }
 
     private IEnumerator StatusTimerCoroutine()

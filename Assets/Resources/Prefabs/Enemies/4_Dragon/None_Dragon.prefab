@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 7231364940424943281}
   - component: {fileID: 9189702149496095291}
   - component: {fileID: -2447878080119211709}
+  - component: {fileID: 2102850416506367150}
   m_Layer: 0
   m_Name: None_Dragon
   m_TagString: Untagged
@@ -835,6 +836,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   currentHealth: 0
+--- !u!114 &2102850416506367150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744308166061465157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d4cd78e28fe3d45b2e60ef061abde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3856945188040586888
 GameObject:
   m_ObjectHideFlags: 0
