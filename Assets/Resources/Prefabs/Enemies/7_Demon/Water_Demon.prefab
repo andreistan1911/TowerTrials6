@@ -1499,6 +1499,7 @@ GameObject:
   - component: {fileID: 854480638709093865}
   - component: {fileID: 1448472904188675455}
   - component: {fileID: -1915414803075703067}
+  - component: {fileID: 1719937380425215411}
   m_Layer: 0
   m_Name: Water_Demon
   m_TagString: Untagged
@@ -1617,6 +1618,20 @@ MonoBehaviour:
   stats:
     health: 0
     speed: 0
+--- !u!114 &1719937380425215411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8094233446992353698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4412fb8aa0e8a6f409b82f8485f3fa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &8206800945086871755
 GameObject:
   m_ObjectHideFlags: 0
