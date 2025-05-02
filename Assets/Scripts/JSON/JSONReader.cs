@@ -6,6 +6,7 @@ public class JSONReader : MonoBehaviour
 {
     private TextAsset enemyJSON;
     private TextAsset reactionJSON;
+    private TextAsset towerJSON;
 
     [System.Serializable]
     public class EnemyParsed
@@ -19,6 +20,23 @@ public class JSONReader : MonoBehaviour
     public class EnemyParsedList
     {
         public EnemyParsed[] enemy;
+    }
+
+    [System.Serializable]
+    public class TowerParsed
+    {
+        public string type;
+        public string element;
+        public float damage;
+        public float attackRate;
+        public float range;
+        public int cost;
+    }
+
+    [System.Serializable]
+    public class TowerParsedList
+    {
+        public TowerParsed[] tower;
     }
 
     [System.Serializable]
@@ -42,38 +60,19 @@ public class JSONReader : MonoBehaviour
     public EnemyParsedList enemyParsedList = new();
     [HideInInspector]
     public ReactionParsedList reactionParsedList = new();
+    [HideInInspector]
+    public TowerParsedList towerParsedList = new();
 
     private void Awake()
     {
         enemyJSON = Resources.Load<TextAsset>("JSON/Enemies");
         reactionJSON = Resources.Load<TextAsset>("JSON/Reactions");
+        towerJSON = Resources.Load<TextAsset>("JSON/Towers");
 
         ReadEnemies();
         ReadReactions();
+        ReadTowers();
     }
-
-    private Global.EnemyType ParseType(string type)
-    {
-        if (type == "Slime")
-            return Global.EnemyType.Slime;
-        if (type == "Goblin")
-            return Global.EnemyType.Goblin;
-        if (type == "Wolf")
-            return Global.EnemyType.Wolf;
-        if (type == "Dragon")
-            return Global.EnemyType.Dragon;
-        if (type == "Skeleton")
-            return Global.EnemyType.Skeleton;
-        if (type == "Viking")
-            return Global.EnemyType.Viking;
-        if (type == "Giant")
-            return Global.EnemyType.Giant;
-        if (type == "Demon")
-            return Global.EnemyType.Demon;
-
-        return Global.EnemyType.Slime; // default value
-    }
-
     private void ReadEnemies()
     {
         enemyParsedList = JsonUtility.FromJson<EnemyParsedList>(enemyJSON.text);
@@ -83,7 +82,7 @@ public class JSONReader : MonoBehaviour
             EnemyParsed currentEnemy = enemyParsedList.enemy[i];
             EnemyStats enemyStats = new(currentEnemy.health, currentEnemy.speed);
 
-            Global.enemyValues.Add(ParseType(currentEnemy.type), enemyStats);
+            Global.enemyValues.Add(ParseEnemyType(currentEnemy.type), enemyStats);
         }
     }
 
@@ -111,6 +110,49 @@ public class JSONReader : MonoBehaviour
             else
                 Global.reactionValues.Add(secondElement, new Dictionary<Global.Element, ReactionStats>() { { firstElement, reactionStats } });
         }
+    }
+
+    private void ReadTowers()
+    {
+        towerParsedList = JsonUtility.FromJson<TowerParsedList>(towerJSON.text);
+
+        float maxDmg = 0, maxAtkSpd = 0, maxRange = 0;
+
+        for (int i = 0; i < towerParsedList.tower.Length; ++i)
+        {
+            TowerParsed currentTower = towerParsedList.tower[i];
+            TowerStats towerStats = new(currentTower.damage, currentTower.attackRate, currentTower.range, currentTower.cost);
+
+            maxDmg = currentTower.damage > maxDmg ? currentTower.damage : maxDmg;
+            maxAtkSpd = (1.0f / currentTower.attackRate) > maxAtkSpd ? (1.0f / currentTower.attackRate) : maxAtkSpd;
+            maxRange = currentTower.range > maxRange ? currentTower.range : maxRange;
+
+            Global.Element element = Global.GetElementFromString(currentTower.element);
+            Global.TowerType type = Global.GetTowerTypeFromString(currentTower.type);
+
+            if (Global.towerValues.ContainsKey(element))
+                Global.towerValues[element].Add(type, towerStats);
+            else
+                Global.towerValues.Add(element, new Dictionary<Global.TowerType, TowerStats>() { { type, towerStats } });
+        }
+
+        Global.ComputeTowerMaxValues(maxDmg, maxAtkSpd, maxRange);
+    }
+
+    private Global.EnemyType ParseEnemyType(string type)
+    {
+        return type switch 
+        { 
+            "Slime"     => Global.EnemyType.Slime,
+            "Goblin"    => Global.EnemyType.Goblin,
+            "Wolf"      => Global.EnemyType.Wolf,
+            "Dragon"    => Global.EnemyType.Dragon,
+            "Skeleton"  => Global.EnemyType.Skeleton,
+            "Viking"    => Global.EnemyType.Viking,
+            "Giant"     => Global.EnemyType.Giant,
+            "Demon"     => Global.EnemyType.Demon,
+            _ => Global.EnemyType.Slime
+        };
     }
 
     private Global.Element GetElementByLetter(char letter)

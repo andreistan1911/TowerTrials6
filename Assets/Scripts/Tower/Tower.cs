@@ -18,13 +18,31 @@ public abstract class Tower : MonoBehaviour
     [HideInInspector]
     public int cost;
 
+    [HideInInspector]
+    public TowerStats stats;
+
     private bool enemyInRange;
 
     public void Start()
     {
         enemyInRange = false;
+        range = GetComponentInChildren<Range>();
 
         Assert.AreNotEqual(0, attackRate);
+        Assert.IsNotNull(range);
+
+        stats = new(Global.towerValues[element][GetTowerTypeFromName()]);
+        damage = stats.damage;
+        attackRate = stats.attackRate;
+        range.GetComponent<SphereCollider>().radius = stats.range;
+        cost = stats.cost;
+    }
+
+    public Global.TowerType GetTowerTypeFromName()
+    {
+        string type = name.Replace("None_", "").Replace("Fire_", "").Replace("Lightning_", "").Replace("Water_", "");
+
+        return Global.GetTowerTypeFromString(type);
     }
 
     abstract public void Fire(Enemy enemy);

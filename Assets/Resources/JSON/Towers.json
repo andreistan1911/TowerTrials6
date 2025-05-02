@@ -1,0 +1,135 @@
+{
+  "tower": [
+    {
+      "type": "Single",
+      "element": "None",
+      "damage": 10.0,
+      "attackRate": 2.5,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Single",
+      "element": "Fire",
+      "damage": 10.0,
+      "attackRate": 2.5,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Single",
+      "element": "Lightning",
+      "damage": 10.0,
+      "attackRate": 2.5,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Single",
+      "element": "Water",
+      "damage": 10.0,
+      "attackRate": 2.5,
+      "range": 0.4,
+      "cost": 2
+    },
+
+    {
+      "type": "Bomb",
+      "element": "None",
+      "damage": 10.0,
+      "attackRate": 1.0,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Bomb",
+      "element": "Fire",
+      "damage": 10.0,
+      "attackRate": 1.0,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Bomb",
+      "element": "Lightning",
+      "damage": 10.0,
+      "attackRate": 1.0,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Bomb",
+      "element": "Water",
+      "damage": 10.0,
+      "attackRate": 1.0,
+      "range": 0.4,
+      "cost": 2
+    },
+
+    {
+      "type": "Aoe",
+      "element": "None",
+      "damage": 2.0,
+      "attackRate": 0.25,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Aoe",
+      "element": "Fire",
+      "damage": 2.0,
+      "attackRate": 0.25,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Aoe",
+      "element": "Lightning",
+      "damage": 2.0,
+      "attackRate": 0.25,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Aoe",
+      "element": "Water",
+      "damage": 2.0,
+      "attackRate": 0.25,
+      "range": 0.4,
+      "cost": 2
+    },
+
+    {
+      "type": "Laser",
+      "element": "None",
+      "damage": 0.05,
+      "attackRate": 0.01,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Laser",
+      "element": "Fire",
+      "damage": 0.05,
+      "attackRate": 0.01,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Laser",
+      "element": "Lightning",
+      "damage": 0.05,
+      "attackRate": 0.01,
+      "range": 0.4,
+      "cost": 2
+    },
+    {
+      "type": "Laser",
+      "element": "Water",
+      "damage": 0.05,
+      "attackRate": 0.01,
+      "range": 0.4,
+      "cost": 2
+    }
+  ]
+}

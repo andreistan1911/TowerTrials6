@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 
 public class WaveStateManager : MonoBehaviour
 {
     public static WaveStateManager Instance { get; private set; }
-
+    public static AbstractWaveManager waveManager;
     public enum WavePhase
     {
         BeforeWaveTime,
@@ -15,7 +18,11 @@ public class WaveStateManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            waveManager = FindFirstObjectByType<AbstractWaveManager>();
+        }
         else Destroy(gameObject);
     }
 
@@ -32,12 +39,16 @@ public class WaveStateManager : MonoBehaviour
     public void OnWaveStarted()
     {
         CurrentPhase = WavePhase.DuringWaveTime;
+
         Debug.Log("Wave started");
     }
 
     public void OnAllEnemiesDefeated()
     {
         CurrentPhase = WavePhase.BeforeWaveTime;
+
+        waveManager.SetANewWave();
+        
         Debug.Log("All enemies defeated");
     }
 

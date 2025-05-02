@@ -18,8 +18,6 @@ public class HitscanWeapon : MonoBehaviour
 
     public void Fire()
     {
-        print(transform.position);
-
         beam.SetPosition(0, transform.position);
         beam.SetPosition(1, transform.position);
 
@@ -27,8 +25,6 @@ public class HitscanWeapon : MonoBehaviour
 
         if (Physics.Raycast(transform.position, shootDirection, out RaycastHit hit, range, ~layersToIgnore))
         {
-            Debug.Log("Lovit: " + hit.collider.name);
-
             // Damage
             Enemy enemy = hit.collider.GetComponent<Enemy>();
             if (enemy != null)
@@ -51,12 +47,6 @@ public class HitscanWeapon : MonoBehaviour
         }
     }
 
-    /*private void ShowLightning(Vector3 targetPoint)
-    {
-        beam.SetPosition(1, transform.position);
-        beam.SetPosition(1, targetPoint);
-    }*/
-
     private void ShowLightning(Vector3 targetPoint)
     {
         Vector3 startPoint = transform.position;
@@ -77,7 +67,6 @@ public class HitscanWeapon : MonoBehaviour
             float t = (float)i / segments;
             Vector3 point = Vector3.Lerp(startPoint, targetPoint, t);
 
-            // Doar punctele intermediare au zigzag
             if (i != 0 && i != segments)
             {
                 float falloff = Mathf.Sin(t * Mathf.PI);

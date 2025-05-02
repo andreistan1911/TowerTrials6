@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class WaveManagerStory : AbstractWaveManger
+public class WaveManagerStory : AbstractWaveManager
 {
     public Global.Level level;
 
@@ -33,26 +33,16 @@ public class WaveManagerStory : AbstractWaveManger
         }
     };
 
-    public override void Spawn(int currentWave)
+    public override void Spawn()
     {
         Dictionary<int, List<EnemySpawnData>> levelWaves = waves[level];
-
-        if (!levelWaves.ContainsKey(currentWave))
-        {
-            Debug.LogWarning("Wave not found!");
-            return;
-        }
-
         bool isLastWave = currentWave == levelWaves.Count;
 
         StartCoroutine(SpawnWave(levelWaves[currentWave], isLastWave));
     }
 
-    private void Update()
+    public override List<EnemySpawnData> GetNextWaveEnemies()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Spawn(2);
-        }
+        return waves[level][currentWave];
     }
 }

@@ -6,6 +6,7 @@ public class Global : ScriptableObject
 {
     public static Dictionary<EnemyType, EnemyStats> enemyValues = new();
     public static Dictionary<Element, Dictionary<Element, ReactionStats>> reactionValues = new();
+    public static Dictionary<Element, Dictionary<TowerType, TowerStats>> towerValues = new();
 
     public const float INFLICT_STATUS_DURATION = 1.0f;
     public const float REACTION_COOLDOWN = 1.0f;
@@ -18,12 +19,24 @@ public class Global : ScriptableObject
 
     public const float VIEW_ANGLE = 10f;
 
+    public static float maxTowerDamage = 0;
+    public static float maxTowerAtkSpd = 0;
+    public static float maxTowerRange  = 0;
+
     public enum Element
     {
         None,
         Fire,
         Lightning,
         Water,
+    }
+
+    public enum TowerType
+    {
+        Single,
+        Laser,
+        Bomb,
+        Aoe
     }
 
     public enum EnemyType
@@ -52,5 +65,48 @@ public class Global : ScriptableObject
     private static float ComputeDpsCooldown()
     {
         return 1.0f / DPS_TICKS;
+    }
+
+    public static Element GetElementFromString(string element)
+    {
+        return element switch
+        {
+            "None"      => Element.None,
+            "Fire"      => Element.Fire,
+            "Lightning" => Element.Lightning,
+            "Water"     => Element.Water,
+            _ => Element.None
+        };
+    }
+
+    public static TowerType GetTowerTypeFromString(string type)
+    {
+        return type switch
+        {
+            "Single" => TowerType.Single,
+            "Bomb"   => TowerType.Bomb,
+            "Aoe"    => TowerType.Aoe,
+            "Laser"  => TowerType.Laser,
+            _ => TowerType.Single
+        };
+    }
+
+    public static void ComputeTowerMaxValues(float maxDamage, float maxAtkSpd, float maxRange)
+    {
+        maxTowerDamage = maxDamage;
+        maxTowerAtkSpd = maxAtkSpd;
+        maxTowerRange  = maxRange;
+    }
+
+    public static void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public static void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
