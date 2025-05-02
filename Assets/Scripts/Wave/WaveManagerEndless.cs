@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveManagerEndless : AbstractWaveManger
+public class WaveManagerEndless : AbstractWaveManager
 {
     private static readonly Dictionary<Global.EnemyType, List<float>> waveChances = new()
     {                                               // dummy   1     2     3     4     5
@@ -18,20 +18,15 @@ public class WaveManagerEndless : AbstractWaveManger
                                                          // dummy,  1,  2,  3,  4,  5
     private static readonly List<int> baseTargetCosts = new() { 0, 10, 20, 30, 40, 50 };
 
-    private void Update()
+    public override void Spawn()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Spawn(1);
-        }
+        StartCoroutine(SpawnWave(enemiesToBeSpawned));
     }
 
-    public override void Spawn(int currentWave)
+    public override List<EnemySpawnData> GetNextWaveEnemies()
     {
         GetWaveNumberAndIteration(currentWave, out int waveNumber, out int iteration);
-        List<EnemySpawnData> enemiesToBeSpawned = GenerateWave(waveNumber, iteration);
-
-        StartCoroutine(SpawnWave(enemiesToBeSpawned));
+        return GenerateWave(waveNumber, iteration);
     }
 
     private void GetWaveNumberAndIteration(int currentWave, out int waveNumber, out int iteration)

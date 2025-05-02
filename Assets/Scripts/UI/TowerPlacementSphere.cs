@@ -20,8 +20,7 @@ public class TowerPlacementSphere : MonoBehaviour
         }
 
         // Show and unlock the cursor
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Global.UnlockCursor();
     }
 
     private void OnTriggerExit(Collider other)
@@ -33,7 +32,6 @@ public class TowerPlacementSphere : MonoBehaviour
         }
 
         // Hide and lock the cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Global.LockCursor();
     }
 }

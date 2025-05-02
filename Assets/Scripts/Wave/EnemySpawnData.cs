@@ -22,6 +22,6 @@ public class EnemySpawnData
 
     public int GetCost()
     {
-        return AbstractWaveManger.baseCosts[type] + (HasElement() ? 1 : 0);
+        return AbstractWaveManager.baseCosts[type] + (HasElement() ? 1 : 0);
     }
 }

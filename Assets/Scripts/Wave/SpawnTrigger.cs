@@ -4,17 +4,14 @@ using System.Collections;
 
 public class SpawnTrigger : MonoBehaviour
 {
-    public AbstractWaveManger waveManager;
+    public AbstractWaveManager waveManager;
     public GameObject towerPurchaseZones;
 
-    private int currentWave;
     private Collider triggerCollider;
     private MeshRenderer meshRenderer;
 
     private void Start()
     {
-        currentWave = 1;
-
         triggerCollider = GetComponent<Collider>();
         meshRenderer = GetComponent<MeshRenderer>();
 
@@ -48,8 +45,7 @@ public class SpawnTrigger : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
 
-        waveManager.Spawn(currentWave);
-        currentWave++;
+        waveManager.Spawn();
 
         // Wait until wave is ended, and then reenable
         yield return new WaitUntil(() =>
