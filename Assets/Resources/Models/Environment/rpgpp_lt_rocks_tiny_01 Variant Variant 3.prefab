@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2487309237370772477
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6918461874251173142, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e60bc0dab3e1294aaa99dc4c9a9ad4d, type: 2}
+    - target: {fileID: 6941882333945617726, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_Name
+      value: rpgpp_lt_rocks_tiny_01 Variant Variant 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.436939
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.006454
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943757013870517718, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e6d3eb6583676d47b7372da073670c7, type: 3}
