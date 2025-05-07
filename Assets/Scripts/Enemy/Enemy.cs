@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
 
         float distance = Vector3.Distance(waypoints[currentWaypoint].transform.position, transform.position);
 
-        if (distance < 0.7f)
+        if (distance < 1.5f)
             currentWaypoint = (currentWaypoint + 1) % waypoints.Count;
     }
     #endregion

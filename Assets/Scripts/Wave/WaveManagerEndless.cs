@@ -26,7 +26,21 @@ public class WaveManagerEndless : AbstractWaveManager
     public override List<EnemySpawnData> GetNextWaveEnemies()
     {
         GetWaveNumberAndIteration(currentWave, out int waveNumber, out int iteration);
-        return GenerateWave(waveNumber, iteration);
+
+        if (waveNumber <= 5)
+            return GenerateWave(waveNumber, iteration);
+
+        else if (waveNumber == 6)
+            return new List<EnemySpawnData>
+                    {
+                        new EnemySpawnData(Global.EnemyType.DragonMama, Global.Element.None),
+                    };
+
+        else //if (waveNumber == 7)
+            return new List<EnemySpawnData>
+                    {
+                        new EnemySpawnData(Global.EnemyType.Wizard, Global.Element.None),
+                    };
     }
 
     private void GetWaveNumberAndIteration(int currentWave, out int waveNumber, out int iteration)

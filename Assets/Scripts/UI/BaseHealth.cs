@@ -17,15 +17,20 @@ public class BaseHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        Enemy enemy = other.gameObject.GetComponent<Enemy>();
 
         if (enemy == null)
             return;
 
-        Destroy(collision.gameObject);
+        Destroy(other.gameObject);
         TakeDamage((int)enemy.type + 1);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
     }
 
     private void TakeDamage(int damage)

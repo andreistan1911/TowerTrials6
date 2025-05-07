@@ -5,7 +5,7 @@
       "element": "None",
       "damage": 10.0,
       "attackRate": 2.5,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -13,7 +13,7 @@
       "element": "Fire",
       "damage": 10.0,
       "attackRate": 2.5,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -21,7 +21,7 @@
       "element": "Lightning",
       "damage": 10.0,
       "attackRate": 2.5,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -29,7 +29,7 @@
       "element": "Water",
       "damage": 10.0,
       "attackRate": 2.5,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
 
@@ -38,7 +38,7 @@
       "element": "None",
       "damage": 10.0,
       "attackRate": 1.0,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -46,7 +46,7 @@
       "element": "Fire",
       "damage": 10.0,
       "attackRate": 1.0,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -54,7 +54,7 @@
       "element": "Lightning",
       "damage": 10.0,
       "attackRate": 1.0,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -62,7 +62,7 @@
       "element": "Water",
       "damage": 10.0,
       "attackRate": 1.0,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
 
@@ -71,7 +71,7 @@
       "element": "None",
       "damage": 2.0,
       "attackRate": 0.25,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -79,7 +79,7 @@
       "element": "Fire",
       "damage": 2.0,
       "attackRate": 0.25,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -87,7 +87,7 @@
       "element": "Lightning",
       "damage": 2.0,
       "attackRate": 0.25,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -95,7 +95,7 @@
       "element": "Water",
       "damage": 2.0,
       "attackRate": 0.25,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
 
@@ -104,7 +104,7 @@
       "element": "None",
       "damage": 0.05,
       "attackRate": 0.01,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -112,7 +112,7 @@
       "element": "Fire",
       "damage": 0.05,
       "attackRate": 0.01,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -120,7 +120,7 @@
       "element": "Lightning",
       "damage": 0.05,
       "attackRate": 0.01,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     },
     {
@@ -128,7 +128,7 @@
       "element": "Water",
       "damage": 0.05,
       "attackRate": 0.01,
-      "range": 0.4,
+      "range": 1.0,
       "cost": 2
     }
   ]

@@ -42,6 +42,7 @@ public class SpawnTrigger : MonoBehaviour
         // Disable Spawn Trigger and purchase zones
         DisableTrigger();
         towerPurchaseZones.SetActive(false);
+        GameObject.Find("NextWave Image").SetActive(false);
 
         yield return new WaitForSeconds(4f);
 

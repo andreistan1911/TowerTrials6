@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 7339866650747886969}
   - component: {fileID: 4998549013403709534}
   m_Layer: 0
-  m_Name: Fire_Skeleton 1
+  m_Name: Fire_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
