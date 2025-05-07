@@ -65,6 +65,9 @@ public class JSONReader : MonoBehaviour
 
     private void Awake()
     {
+        if (Global.isDataLoaded)
+            return;
+
         enemyJSON = Resources.Load<TextAsset>("JSON/Enemies");
         reactionJSON = Resources.Load<TextAsset>("JSON/Reactions");
         towerJSON = Resources.Load<TextAsset>("JSON/Towers");
@@ -72,6 +75,8 @@ public class JSONReader : MonoBehaviour
         ReadEnemies();
         ReadReactions();
         ReadTowers();
+
+        Global.isDataLoaded = true;
     }
     private void ReadEnemies()
     {

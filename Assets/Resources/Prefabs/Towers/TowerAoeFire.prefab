@@ -313,6 +313,11 @@ MonoBehaviour:
   element: 1
   range: {fileID: 0}
   cost: 0
+  stats:
+    damage: 0
+    attackRate: 0
+    range: 0
+    cost: 0
 --- !u!1 &7138361350778022121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2230425271548347301, guid: 6d7fe563a6c0e2542a16f21615d7a3d3, type: 3}
