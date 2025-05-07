@@ -8072,7 +8072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ea64b21653a714c860a2725dc8304c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: DevScene
+  sceneName: FinalTutorial
 --- !u!65 &1587125820
 BoxCollider:
   m_ObjectHideFlags: 0
