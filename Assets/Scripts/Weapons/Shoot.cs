@@ -19,22 +19,30 @@ public class Shoot : MonoBehaviour
 
         clickAction.started += ctx => OnClickStarted();
         clickAction.canceled += ctx => OnClickCanceled();
+
+        Global.LockCursor();
     }
 
     private void Update()
     {
         if (Keyboard.current.digit1Key.wasPressedThisFrame)
         {
+            weapons[1].SetActive(false);
+            weapons[2].SetActive(false);
             currentWeaponNr = 0;
         }
 
         if (Keyboard.current.digit2Key.wasPressedThisFrame)
         {
+            weapons[0].SetActive(false);
+            weapons[2].SetActive(false);
             currentWeaponNr = 1;
         }
 
         if (Keyboard.current.digit3Key.wasPressedThisFrame)
         {
+            weapons[0].SetActive(false);
+            weapons[1].SetActive(false);
             currentWeaponNr = 2;
         }
 
@@ -74,7 +82,10 @@ public class Shoot : MonoBehaviour
         isClicking = false;
 
         if (currentWeaponNr != 2) // a bit hardcoded but it's fine
-            StartCoroutine(SetInactiveAfterParticlesFinished(weapons[currentWeaponNr]));
+        {
+            if (gameObject.activeSelf) // when you lose/win, the routine would have still happened otherwise
+                StartCoroutine(SetInactiveAfterParticlesFinished(weapons[currentWeaponNr]));
+        }
         else
             weapons[2].SetActive(false);
     }

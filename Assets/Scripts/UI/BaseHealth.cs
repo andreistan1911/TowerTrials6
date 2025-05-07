@@ -8,10 +8,12 @@ public class BaseHealth : MonoBehaviour
 
     private int health;
     private TextMeshProUGUI healthText;
+    private AbstractWaveManager waveManager;
 
     private void Start()
     {
         healthText = GameObject.Find("BaseHP Text").GetComponent<TextMeshProUGUI>();
+        waveManager = FindFirstObjectByType<AbstractWaveManager>();
 
         healthText.text = maxHealth.ToString();
         health = maxHealth;
@@ -46,9 +48,11 @@ public class BaseHealth : MonoBehaviour
 
     private void DoLoseLogic()
     {
-        // TODO: IMPROVE THIS
-        Time.timeScale = 0f; // opreste timpul
         Global.UnlockCursor();
-        SceneManager.LoadScene("Main Menu");
+
+        PlayerPrefs.SetInt("LastWave", waveManager.currentWave);
+        PlayerPrefs.SetString("LostLevelName", SceneManager.GetActiveScene().name);
+
+        SceneManager.LoadScene("Loss Menu");
     }
 }

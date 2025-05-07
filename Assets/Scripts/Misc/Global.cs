@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Global : ScriptableObject
 {
+    public static bool isDataLoaded = false;
+
     public static Dictionary<EnemyType, EnemyStats> enemyValues = new();
     public static Dictionary<Element, Dictionary<Element, ReactionStats>> reactionValues = new();
     public static Dictionary<Element, Dictionary<TowerType, TowerStats>> towerValues = new();
