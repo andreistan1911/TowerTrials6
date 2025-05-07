@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1681742768378813133}
   - component: {fileID: 7697762084885356605}
   - component: {fileID: 5366446495160730199}
-  - component: {fileID: 8041772610326894162}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -4776,6 +4775,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4814,13 +4816,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -4830,20 +4834,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &8041772610326894162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2254509697930547698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b67815b9be8c25438609e1f412961e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dps: 1
-  element: 5
 --- !u!1 &8857929418459785839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,7 +4844,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5696771360886866539}
   - component: {fileID: 2540892670442525246}
-  - component: {fileID: 5967889821279772807}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -4893,15 +4882,3 @@ MonoBehaviour:
   m_distance: 4
   m_isTrigger: 1
   m_isFixScale: 1
---- !u!114 &5967889821279772807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8857929418459785839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99d03255631745b43855e76e94b78495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

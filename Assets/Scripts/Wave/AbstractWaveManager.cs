@@ -12,7 +12,8 @@ public abstract class AbstractWaveManager : MonoBehaviour
 
     protected readonly List<Waypoint> waypoints = new();
 
-    protected int currentWave;
+    [HideInInspector]
+    public int currentWave;
 
     [HideInInspector]
     public static List<EnemySpawnData> enemiesToBeSpawned;
