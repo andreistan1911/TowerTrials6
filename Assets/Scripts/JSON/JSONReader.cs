@@ -143,14 +143,16 @@ public class JSONReader : MonoBehaviour
     {
         return type switch 
         { 
-            "Slime"     => Global.EnemyType.Slime,
-            "Goblin"    => Global.EnemyType.Goblin,
-            "Wolf"      => Global.EnemyType.Wolf,
-            "Dragon"    => Global.EnemyType.Dragon,
-            "Skeleton"  => Global.EnemyType.Skeleton,
-            "Viking"    => Global.EnemyType.Viking,
-            "Giant"     => Global.EnemyType.Giant,
-            "Demon"     => Global.EnemyType.Demon,
+            "Slime"      => Global.EnemyType.Slime,
+            "Goblin"     => Global.EnemyType.Goblin,
+            "Wolf"       => Global.EnemyType.Wolf,
+            "Dragon"     => Global.EnemyType.Dragon,
+            "Skeleton"   => Global.EnemyType.Skeleton,
+            "Viking"     => Global.EnemyType.Viking,
+            "Giant"      => Global.EnemyType.Giant,
+            "Demon"      => Global.EnemyType.Demon,
+            "DragonMama" => Global.EnemyType.DragonMama,
+            "Wizard"     => Global.EnemyType.Wizard,
             _ => Global.EnemyType.Slime
         };
     }

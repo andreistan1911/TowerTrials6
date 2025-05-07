@@ -28,7 +28,9 @@ public abstract class AbstractWaveManager : MonoBehaviour
         { Global.EnemyType.Skeleton, 5 },
         { Global.EnemyType.Viking, 6 },
         { Global.EnemyType.Demon, 7 },
-        { Global.EnemyType.Giant, 8 }
+        { Global.EnemyType.Giant, 8 },
+        { Global.EnemyType.DragonMama, 9 },
+        { Global.EnemyType.Wizard, 10 },
     };
 
     private void Start()
@@ -81,7 +83,7 @@ public abstract class AbstractWaveManager : MonoBehaviour
             result.AppendLine($"{kvp.Value} {kvp.Key}");
         }
 
-        return "Prepare for:\n" + result.ToString().TrimEnd(); // elimina ultimul newline
+        return $"Prepare for wave {currentWave}:\n" + result.ToString().TrimEnd(); // elimina ultimul newline
     }
 
     protected IEnumerator SpawnWave(List<EnemySpawnData> enemies, bool isLastWave = false)
@@ -93,7 +95,7 @@ public abstract class AbstractWaveManager : MonoBehaviour
             GameObject enemyPrefab = Resources.Load<GameObject>
                 ($"Prefabs/Enemies/{baseCosts[enemyData.type]}_{enemyData.type}/{enemyData.element}_{enemyData.type}");
 
-            GameObject enemyInstance = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+            GameObject enemyInstance = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
             Enemy enemy = enemyInstance.GetComponent<Enemy>();
 
             enemy.waypoints = waypoints;

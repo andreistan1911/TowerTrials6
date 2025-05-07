@@ -7,6 +7,9 @@ public class WaveStateManager : MonoBehaviour
 {
     public static WaveStateManager Instance { get; private set; }
     public static AbstractWaveManager waveManager;
+
+    private static GameObject nextWaveImage;
+
     public enum WavePhase
     {
         BeforeWaveTime,
@@ -22,6 +25,7 @@ public class WaveStateManager : MonoBehaviour
         {
             Instance = this;
             waveManager = FindFirstObjectByType<AbstractWaveManager>();
+            nextWaveImage = GameObject.Find("NextWave Image");
         }
         else Destroy(gameObject);
     }
@@ -48,13 +52,15 @@ public class WaveStateManager : MonoBehaviour
         CurrentPhase = WavePhase.BeforeWaveTime;
 
         waveManager.SetANewWave();
-        
+        nextWaveImage.SetActive(true);
+
         Debug.Log("All enemies defeated");
     }
 
     public void OnLastWaveEnded()
     {
         CurrentPhase = WavePhase.AfterLastWave;
+
         Debug.Log("Last wave ended");
     }
 }

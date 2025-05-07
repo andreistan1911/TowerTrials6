@@ -48,7 +48,9 @@ public class Global : ScriptableObject
         Skeleton,
         Viking,
         Demon,
-        Giant
+        Giant,
+        DragonMama,
+        Wizard
     }
 
     public enum Level
