@@ -24,10 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/weapon_delet.unity
     guid: 279a7bb123357904a90413371095614c
   - enabled: 1
-    path: Assets/Scenes/WeaponTest.unity
+    path: Assets/Scenes/TutorialScenes/1 to 6/5WeaponTower.unity
     guid: 8dcbd0ccfad405f4983af6d1bbf12694
   - enabled: 1
-    path: Assets/Scenes/FinalTutorial.unity
+    path: Assets/Scenes/TutorialScenes/FinalTutorial.unity
     guid: b0872319c9b506242992cfc13ddbcd9c
   - enabled: 1
     path: Assets/Scenes/Endless.unity
@@ -36,8 +36,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Loss Endless.unity
     guid: 1208d07908842724ebd8876eb2fcebc2
   - enabled: 1
-    path: Assets/Scenes/Loss Tutorial.unity
+    path: Assets/Scenes/TutorialScenes/Loss Tutorial.unity
     guid: 95d51cdb359e1be45911a8adf990deb0
+  - enabled: 1
+    path: Assets/Scenes/TutorialScenes/1 to 6/1BaseTowers.unity
+    guid: 1fe2adaedb483c34cb002e732ea6a1fe
+  - enabled: 1
+    path: Assets/Scenes/TutorialScenes/1 to 6/2SpawnTowers.unity
+    guid: 777ce979c310aeb499b04a6980d7f173
+  - enabled: 1
+    path: Assets/Scenes/TutorialScenes/1 to 6/3ReactionTowers.unity
+    guid: 55f9297ab2dee6b4ba7aef67cff10e79
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
