@@ -178,8 +178,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5142232675083596684}
   m_Father: {fileID: 0}
@@ -370,6 +370,11 @@ MonoBehaviour:
   element: 3
   range: {fileID: 0}
   cost: 0
+  stats:
+    damage: 0
+    attackRate: 0
+    range: 0
+    cost: 0
   bulletSpeed: 10
   bulletPrefab: {fileID: 8099632575411566864, guid: 3fe45642381d5cc449e18e0fd179a6de, type: 3}
 --- !u!1 &7403008833409678768 stripped

@@ -57,8 +57,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8059166159014994069}
   m_Father: {fileID: 0}
@@ -392,6 +392,11 @@ MonoBehaviour:
   element: 1
   range: {fileID: 0}
   cost: 0
+  stats:
+    damage: 0
+    attackRate: 0
+    range: 0
+    cost: 0
   launchHeight: 2.5
   bombPrefab: {fileID: 4878911949201888455, guid: c3828a86ab8050c47a4eecb20cf2ca3b, type: 3}
 --- !u!4 &8059166159014994069 stripped

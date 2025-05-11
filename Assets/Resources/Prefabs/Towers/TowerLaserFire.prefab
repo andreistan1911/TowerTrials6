@@ -147,8 +147,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4580981588451551824}
   m_Father: {fileID: 0}
@@ -318,6 +318,11 @@ MonoBehaviour:
   element: 1
   range: {fileID: 0}
   cost: 0
+  stats:
+    damage: 0
+    attackRate: 0
+    range: 0
+    cost: 0
 --- !u!120 &7844582365796514301
 LineRenderer:
   serializedVersion: 2

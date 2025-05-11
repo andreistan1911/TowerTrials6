@@ -635,8 +635,8 @@ RectTransform:
   m_GameObject: {fileID: 1333084578792024679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8742883083756569067}
   m_Father: {fileID: 1323605015141129888}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (no type)
+  m_text: (No Type Selected)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
   m_sharedMaterial: {fileID: -1492102119398036954, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
@@ -2411,7 +2411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c0b8d3d15395b4a9d89168cb9cbf8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7877a95d2f297e343907ae4d3b7b4a0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2599,7 +2599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c0b8d3d15395b4a9d89168cb9cbf8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7877a95d2f297e343907ae4d3b7b4a0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
