@@ -5791,7 +5791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defeat enemies using reactions
+  m_text: Defeat enemies using your spells
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
   m_sharedMaterial: {fileID: -1492102119398036954, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
@@ -7952,7 +7952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ea64b21653a714c860a2725dc8304c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: FinalTutorial
+  sceneName: 5WeaponTower
 --- !u!65 &1587125820
 BoxCollider:
   m_ObjectHideFlags: 0

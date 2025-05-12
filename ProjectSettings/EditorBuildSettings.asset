@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/weapon_delet.unity
     guid: 279a7bb123357904a90413371095614c
   - enabled: 1
-    path: Assets/Scenes/TutorialScenes/1 to 6/5WeaponTower.unity
-    guid: 8dcbd0ccfad405f4983af6d1bbf12694
-  - enabled: 1
     path: Assets/Scenes/TutorialScenes/FinalTutorial.unity
     guid: b0872319c9b506242992cfc13ddbcd9c
   - enabled: 1
@@ -45,8 +42,14 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorialScenes/1 to 6/2SpawnTowers.unity
     guid: 777ce979c310aeb499b04a6980d7f173
   - enabled: 1
+    path: Assets/Scenes/TutorialScenes/1 to 6/4WeaponTest.unity
+    guid: 95fbd005c7c4b444f9ee29ac56ea008a
+  - enabled: 1
     path: Assets/Scenes/TutorialScenes/1 to 6/3ReactionTowers.unity
     guid: 55f9297ab2dee6b4ba7aef67cff10e79
+  - enabled: 1
+    path: Assets/Scenes/TutorialScenes/1 to 6/5WeaponTower.unity
+    guid: 8dcbd0ccfad405f4983af6d1bbf12694
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
