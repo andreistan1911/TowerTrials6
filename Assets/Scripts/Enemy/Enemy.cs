@@ -74,8 +74,6 @@ public class Enemy : MonoBehaviour
         if (agent == null)
             Debug.LogError($"{name} is missing NavMeshAgent!");
 
-        if (waypoints == null || waypoints.Count == 0)
-            Debug.LogError($"{name} has no waypoints set!");
     }
     #endregion
 
