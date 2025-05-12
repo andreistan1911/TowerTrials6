@@ -194,7 +194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3774011312916666147, guid: 335422ae69f5d25499ef8f40de4e32c0, type: 3}
       propertyPath: m_Name
-      value: Lightning_SingleTarget 2
+      value: Lightning_Single
       objectReference: {fileID: 0}
     - target: {fileID: 4545306198249065881, guid: 335422ae69f5d25499ef8f40de4e32c0, type: 3}
       propertyPath: m_LocalPosition.x

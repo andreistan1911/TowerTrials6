@@ -13,7 +13,7 @@ public class TowerLaser : Tower
         base.Start();
 
         lastFire = 0f;
-        defaultBeamPosition = transform.position + new Vector3(0.01f, 2.98f, 0f);
+        defaultBeamPosition = transform.position + new Vector3(0.01f, 4.4f, 0f);
         eye = transform.Find("Eye").transform;
         beam = GetComponent<LineRenderer>();
 

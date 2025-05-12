@@ -42,6 +42,9 @@ public abstract class AbstractWaveManager : MonoBehaviour
         // Clear existing, just in case
         waypoints.Clear();
 
+        if (waypointsCollection == null)
+            return;
+
         foreach (Transform child in waypointsCollection.transform)
         {
             Waypoint wp = child.GetComponent<Waypoint>();
@@ -59,7 +62,9 @@ public abstract class AbstractWaveManager : MonoBehaviour
     {
         currentWave++;
         enemiesToBeSpawned = GetNextWaveEnemies();
-        NextWaveText.text = CreateNextWaveText();
+
+        if (NextWaveText != null)
+            NextWaveText.text = CreateNextWaveText();   
     }
 
     private string CreateNextWaveText()

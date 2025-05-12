@@ -194,7 +194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3774011312916666147, guid: 90ab6fd4705d5bb478a0ace8488dbf1a, type: 3}
       propertyPath: m_Name
-      value: Water_SingleTarget 1
+      value: Water_Single
       objectReference: {fileID: 0}
     - target: {fileID: 4545306198249065881, guid: 90ab6fd4705d5bb478a0ace8488dbf1a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774011312916666147, guid: 6d7fe563a6c0e2542a16f21615d7a3d3, type: 3}
       propertyPath: m_Name
-      value: Fire_AOE
+      value: Fire_Aoe
       objectReference: {fileID: 0}
     - target: {fileID: 4545306198249065881, guid: 6d7fe563a6c0e2542a16f21615d7a3d3, type: 3}
       propertyPath: m_LocalPosition.x

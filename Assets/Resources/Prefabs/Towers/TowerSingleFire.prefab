@@ -194,7 +194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3774011312916666147, guid: a4f2bc83824a72a4f940c938231680e5, type: 3}
       propertyPath: m_Name
-      value: Fire_SingleTarget 1
+      value: Fire_Single
       objectReference: {fileID: 0}
     - target: {fileID: 4545306198249065881, guid: a4f2bc83824a72a4f940c938231680e5, type: 3}
       propertyPath: m_LocalPosition.x

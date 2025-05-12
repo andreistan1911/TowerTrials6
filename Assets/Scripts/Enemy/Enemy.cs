@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     [Tooltip("NavMesh Waypoints")]
     public List<Waypoint> waypoints = new();
 
-    [HideInInspector]
     public EnemyStats stats;
 
     //
@@ -58,7 +57,8 @@ public class Enemy : MonoBehaviour
 
     private void InitializeStats()
     {
-        stats = new(Global.enemyValues[type]);
+        if (name != "Practice Dummy")
+            stats = new(Global.enemyValues[type]);
 
         health.maxHealth = stats.health;
         health.currentHealth = stats.health;

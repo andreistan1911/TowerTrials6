@@ -18,7 +18,6 @@ public class SpawnTrigger : MonoBehaviour
         Assert.IsNotNull(waveManager);
         Assert.IsNotNull(towerPurchaseZones);
         Assert.IsNotNull(triggerCollider);
-        Assert.IsNotNull(meshRenderer);
 
         if (!triggerCollider.isTrigger)
         {
@@ -42,7 +41,8 @@ public class SpawnTrigger : MonoBehaviour
         // Disable Spawn Trigger and purchase zones
         DisableTrigger();
         towerPurchaseZones.SetActive(false);
-        GameObject.Find("NextWave Image").SetActive(false);
+        if (GameObject.Find("NextWave Image") != null)
+            GameObject.Find("NextWave Image").SetActive(false);
 
         yield return new WaitForSeconds(4f);
 
@@ -61,12 +61,12 @@ public class SpawnTrigger : MonoBehaviour
     private void DisableTrigger()
     {
         triggerCollider.enabled = false;
-        meshRenderer.enabled = false;
+        //meshRenderer.enabled = false;
     }
 
     private void EnableTrigger()
     {
         triggerCollider.enabled = true;
-        meshRenderer.enabled = true;
+        //meshRenderer.enabled = true;
     }
 }

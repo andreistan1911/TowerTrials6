@@ -5,15 +5,20 @@ public class TowerPlacementSphere : MonoBehaviour
     [HideInInspector]
     public Tower tower;
 
+    private GameObject crosshair;
+
     private void Start()
     {
         tower = null;
+        crosshair = GameObject.Find("Crosshair");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (TowerPurchaseMenu.Instance != null)
         {
+            if (crosshair != null)
+                crosshair.SetActive(false);
             TowerPurchaseMenu.Instance.gameObject.SetActive(true);
             TowerPurchaseMenu.Instance.SetPositionToBuild(transform.parent.position);
             TowerPurchaseMenu.Instance.purchaseSphere = this;
@@ -27,6 +32,8 @@ public class TowerPlacementSphere : MonoBehaviour
     {
         if (TowerPurchaseMenu.Instance != null)
         {
+            if (crosshair != null)
+                crosshair.SetActive(true);
             TowerPurchaseMenu.Instance.ResetSelections();
             TowerPurchaseMenu.Instance.gameObject.SetActive(false);
         }

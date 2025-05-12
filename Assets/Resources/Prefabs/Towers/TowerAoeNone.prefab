@@ -163,7 +163,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3774011312916666147, guid: dd05f6216a481ed4e852e7f85d56dce7, type: 3}
       propertyPath: m_Name
-      value: Default_AOE
+      value: None_Aoe
       objectReference: {fileID: 0}
     - target: {fileID: 4545306198249065881, guid: dd05f6216a481ed4e852e7f85d56dce7, type: 3}
       propertyPath: m_LocalPosition.x

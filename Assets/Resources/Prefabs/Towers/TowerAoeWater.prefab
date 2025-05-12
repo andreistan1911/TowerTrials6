@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774011312916666147, guid: 714e666cb1aaf5545a75e8d9b2c728fc, type: 3}
       propertyPath: m_Name
-      value: Water_AOE
+      value: Water_Aoe
       objectReference: {fileID: 0}
     - target: {fileID: 4545306198249065881, guid: 714e666cb1aaf5545a75e8d9b2c728fc, type: 3}
       propertyPath: m_LocalPosition.x

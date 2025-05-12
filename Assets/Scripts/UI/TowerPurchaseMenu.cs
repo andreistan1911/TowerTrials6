@@ -16,10 +16,16 @@ public class TowerPurchaseMenu : MonoBehaviour
     [HideInInspector]
     public TowerPlacementSphere purchaseSphere;
 
-    private Global.Element selectedElement = Global.Element.None;
+    [HideInInspector]
+    public Global.Element selectedElement = Global.Element.None;
     private Global.TowerType selectedType = Global.TowerType.Single;
 
     private Vector3 positionToBuild;
+
+    private GameObject crosshair;
+
+    [HideInInspector]
+    public bool AmIinTutorial = false;
 
     public static TowerPurchaseMenu Instance { get; private set; }
 
@@ -32,14 +38,17 @@ public class TowerPurchaseMenu : MonoBehaviour
         }
 
         Instance = this;
+        
     }
 
     private void Start()
     {
+        if (name == "Tutorial Menu")
+            AmIinTutorial = true;
+
         SetBarFill(dmgBar, 0);
         SetBarFill(rangeBar, 0);
         SetBarFill(atkSpeedBar, 0);
-
         ResetSelections();
         confirmButton.onClick.AddListener(BuildTower);
 
@@ -52,6 +61,8 @@ public class TowerPurchaseMenu : MonoBehaviour
         bombButton.onClick.AddListener(() => SelectType(Global.TowerType.Bomb));
         singleButton.onClick.AddListener(() => SelectType(Global.TowerType.Single));
         laserButton.onClick.AddListener(() => SelectType(Global.TowerType.Laser));
+
+        crosshair = GameObject.Find("Crosshair");
 
         gameObject.SetActive(false);
     }
@@ -91,6 +102,9 @@ public class TowerPurchaseMenu : MonoBehaviour
 
     private void UpdateSelectedElement()
     {
+        if (AmIinTutorial)
+            selectedElement = Global.Element.Fire;
+
         switch (selectedElement)
         {
             case Global.Element.None:
@@ -119,6 +133,9 @@ public class TowerPurchaseMenu : MonoBehaviour
 
     private void UpdateSelectedType()
     {
+        if (AmIinTutorial)
+            selectedType = Global.TowerType.Single;
+
         selectedTypeText.text = selectedType switch
         {
             Global.TowerType.Aoe => "Aoe",
@@ -158,6 +175,8 @@ public class TowerPurchaseMenu : MonoBehaviour
 
         // Reset element & type and disable build menu
         ResetSelections();
+        if (crosshair != null)
+            crosshair.SetActive(true);
         gameObject.SetActive(false);
     }
 
