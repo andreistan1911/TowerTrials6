@@ -399,16 +399,16 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.745283, g: 0, b: 0.44750983, a: 1}
-      key1: {r: 1, g: 0.61737454, b: 0, a: 1}
-      key2: {r: 0.9150943, g: 0, b: 0.49037296, a: 1}
+      key0: {r: 0.1615982, g: 0, b: 0.3962264, a: 1}
+      key1: {r: 0.58148575, g: 0, b: 1, a: 1}
+      key2: {r: 0.45303917, g: 0, b: 1, a: 1}
       key3: {r: 1, g: 0.5400758, b: 0, a: 0}
       key4: {r: 1, g: 0.5400758, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 9638
-      ctime1: 24479
+      ctime1: 33384
       ctime2: 51272
       ctime3: 65535
       ctime4: 65535
