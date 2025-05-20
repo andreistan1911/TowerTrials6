@@ -1368,6 +1368,7 @@ GameObject:
   - component: {fileID: 1249481991}
   - component: {fileID: 1249481994}
   - component: {fileID: 1249481995}
+  - component: {fileID: 1249481996}
   m_Layer: 5
   m_Name: EndlessButton
   m_TagString: Untagged
@@ -1501,7 +1502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d801482bfb8da5242a9d8878b297f821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: DevScene
+  sceneName: Endless
 --- !u!114 &1249481995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,6 +1518,20 @@ MonoBehaviour:
   myButton: {fileID: 1249481991}
   audioSource: {fileID: 15037163}
   clickSound: {fileID: 8300000, guid: 236caead7017e8e47bd7f85a16a3e681, type: 3}
+--- !u!114 &1249481996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249481989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ea202957c205c4f83e4c62e2e85b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endlessText: {fileID: 361595324}
+  lockImage: {fileID: 122968914}
 --- !u!1 &1652440440
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Global : ScriptableObject
@@ -24,6 +26,12 @@ public class Global : ScriptableObject
     public static float maxTowerDamage = 0;
     public static float maxTowerAtkSpd = 0;
     public static float maxTowerRange  = 0;
+
+    public enum WinCode
+    {
+        Nothing,
+        FinishedTutorial
+    }
 
     public enum Element
     {
@@ -69,6 +77,19 @@ public class Global : ScriptableObject
     private static float ComputeDpsCooldown()
     {
         return 1.0f / DPS_TICKS;
+    }
+
+    internal static void HandleWin(WinCode code)
+    {
+        switch (code)
+        {
+            case WinCode.FinishedTutorial:
+                PlayerPrefs.SetInt("EndlessUnlocked", 1);
+                SceneManager.LoadScene("Win Tutorial");
+                break;
+            default:
+                break;
+        }
     }
 
     public static Element GetElementFromString(string element)

@@ -7,6 +7,7 @@ public class WaveStateManager : MonoBehaviour
 {
     public static WaveStateManager Instance { get; private set; }
     public static AbstractWaveManager waveManager;
+    public Global.WinCode winCode;
 
     private static GameObject nextWaveImage;
 
@@ -61,6 +62,8 @@ public class WaveStateManager : MonoBehaviour
     public void OnLastWaveEnded()
     {
         CurrentPhase = WavePhase.AfterLastWave;
+
+        Global.HandleWin(winCode);
 
         Debug.Log("Last wave ended");
     }
