@@ -9,8 +9,6 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene()
     {
-        print(sceneName);
         SceneManager.LoadScene(sceneName);
     }
-
 }

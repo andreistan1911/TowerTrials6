@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Global : ScriptableObject
 {
+    public static bool isPaused = false;
     public static bool isDataLoaded = false;
 
     public static Dictionary<EnemyType, EnemyStats> enemyValues = new();
