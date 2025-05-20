@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        GoldManager.GainGold((int)GetComponent<Enemy>().type + 1);
         Destroy(gameObject);
     }
 }
