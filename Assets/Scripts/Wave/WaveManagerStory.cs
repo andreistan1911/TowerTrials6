@@ -8,7 +8,7 @@ public class WaveManagerStory : AbstractWaveManager
 
     private static readonly Dictionary<Global.Level, Dictionary<int, List<EnemySpawnData>>> waves = new()
     {
-        { Global.Level.Level_1, new Dictionary<int, List<EnemySpawnData>>
+        { Global.Level.Tutorial, new Dictionary<int, List<EnemySpawnData>>
             {
                 { 1, new List<EnemySpawnData>
                     {
@@ -27,6 +27,21 @@ public class WaveManagerStory : AbstractWaveManager
                     {
                         new EnemySpawnData(Global.EnemyType.Slime, Global.Element.Fire),
                         new EnemySpawnData(Global.EnemyType.Slime, Global.Element.Water)
+                    }
+                },
+                { 4, new List<EnemySpawnData>
+                    {
+                        new EnemySpawnData(Global.EnemyType.Goblin, Global.Element.None),
+                        new EnemySpawnData(Global.EnemyType.Goblin, Global.Element.Lightning),
+                        new EnemySpawnData(Global.EnemyType.Goblin, Global.Element.Lightning),
+                    }
+                },
+                { 5, new List<EnemySpawnData>
+                    {
+                        new EnemySpawnData(Global.EnemyType.Wolf, Global.Element.Lightning),
+                        new EnemySpawnData(Global.EnemyType.Slime, Global.Element.Water),
+                        new EnemySpawnData(Global.EnemyType.Slime, Global.Element.Fire),
+                        new EnemySpawnData(Global.EnemyType.Slime, Global.Element.Lightning),
                     }
                 }
             }

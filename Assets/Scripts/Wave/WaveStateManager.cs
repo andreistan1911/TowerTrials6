@@ -52,7 +52,8 @@ public class WaveStateManager : MonoBehaviour
         CurrentPhase = WavePhase.BeforeWaveTime;
 
         waveManager.SetANewWave();
-        nextWaveImage.SetActive(true);
+        if (nextWaveImage != null)
+            nextWaveImage.SetActive(true);
 
         Debug.Log("All enemies defeated");
     }

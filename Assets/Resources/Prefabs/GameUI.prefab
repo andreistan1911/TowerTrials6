@@ -483,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6034644351236102349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -608,6 +608,8 @@ MonoBehaviour:
   selectedElementImage: {fileID: 8397500513988848975}
   selectedTypeText: {fileID: 6913899994446882495}
   purchaseSphere: {fileID: 0}
+  selectedElement: 0
+  AmIinTutorial: 0
 --- !u!1 &1333084578792024679
 GameObject:
   m_ObjectHideFlags: 0
