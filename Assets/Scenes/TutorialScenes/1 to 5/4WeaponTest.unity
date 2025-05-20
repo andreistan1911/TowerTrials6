@@ -2857,6 +2857,78 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2068742322}
   m_SourcePrefab: {fileID: 100100000, guid: 586f3d1a7b79dc440ba1d9b07ded8a14, type: 3}
+--- !u!1001 &614831719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1063.588
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 547.694
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.669305
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338352023312351179, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089945563002519024, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+      propertyPath: m_Name
+      value: Effects
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+--- !u!82 &614831720 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1379312956133277662, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+  m_PrefabInstance: {fileID: 614831719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &614831721 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4376438238474586678, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+  m_PrefabInstance: {fileID: 614831719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &614831722 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7517448807572266288, guid: 92c749db9c4e19341b92f922c3ce80bc, type: 3}
+  m_PrefabInstance: {fileID: 614831719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &616592225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e86353f459bb9da48966c003c4d604c0, type: 3}
@@ -8225,6 +8297,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3883848893193155234, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: fireSource
+      value: 
+      objectReference: {fileID: 614831722}
+    - target: {fileID: 3883848893193155234, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: waterSource
+      value: 
+      objectReference: {fileID: 614831721}
+    - target: {fileID: 3883848893193155234, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: lightningSource
+      value: 
+      objectReference: {fileID: 614831720}
     - target: {fileID: 4293386162310785832, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.314
@@ -11436,3 +11520,4 @@ SceneRoots:
   - {fileID: 43983964}
   - {fileID: 1742491317}
   - {fileID: 895795204}
+  - {fileID: 614831719}

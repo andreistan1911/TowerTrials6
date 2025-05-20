@@ -14,6 +14,7 @@ public class LossMenuHandler : MonoBehaviour
 
     private void Start()
     {
+        Global.UnlockCursor();
         retryButton.onClick.AddListener(OnRetry);
         backToMenuButton.onClick.AddListener(OnBackToMenu);
 
