@@ -22,6 +22,9 @@ public class GoldManager : MonoBehaviour
 
     public static void GainGold(int gold)
     {
+        if (goldText == null)
+            return;
+
         SetGold(GetGold() + gold);
     }
 
