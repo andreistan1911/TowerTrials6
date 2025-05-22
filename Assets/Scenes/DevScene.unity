@@ -845,6 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3d9324bc981804798511f2e64313b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winCode: 0
 --- !u!4 &621578622
 Transform:
   m_ObjectHideFlags: 0

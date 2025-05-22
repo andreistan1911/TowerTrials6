@@ -731,6 +731,7 @@ GameObject:
   - component: {fileID: 7231364940424943281}
   - component: {fileID: 7524467344766674839}
   - component: {fileID: -4562908632931758448}
+  - component: {fileID: 2409237175433436742}
   m_Layer: 0
   m_Name: Water_Dragon
   m_TagString: Untagged
@@ -863,6 +864,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   currentHealth: 0
+--- !u!95 &2409237175433436742
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744308166061465157}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca89c106855b9864892b1036288bcf8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3856945188040586888
 GameObject:
   m_ObjectHideFlags: 0
