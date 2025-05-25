@@ -275,6 +275,9 @@ MonoBehaviour:
   - {fileID: 5753884911233594270}
   - {fileID: 6655646366646697883}
   - {fileID: 5896435173634458719}
+  fireSource: {fileID: 0}
+  waterSource: {fileID: 0}
+  lightningSource: {fileID: 0}
 --- !u!1 &6664973193907599556
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,9 +404,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 523242511499135286, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1497045033111291187, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497045033111291187, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5075076543625304810, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
       propertyPath: m_LocalRotation.w
@@ -428,6 +439,14 @@ PrefabInstance:
     - target: {fileID: 5075076543625304810, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765031339126516666, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_distance
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788944087801034472, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_distance
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8290601804741759360, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
       propertyPath: m_LocalPosition.x
