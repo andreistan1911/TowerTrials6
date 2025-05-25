@@ -203,12 +203,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411543589097490893}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.38, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7550205901148925695}
+  m_Father: {fileID: 1620957672525849053}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2059139919177413006
 MeshFilter:
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 212929588135950039}
   - component: {fileID: 7518361754789534220}
   m_Layer: 0
-  m_Name: mesh1575904860
+  m_Name: Leg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,12 +452,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3301541732879660801}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.38, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7550205901148925695}
+  m_Father: {fileID: 6866382299304074042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2981704592452182805
 MeshFilter:
@@ -5444,7 +5444,7 @@ GameObject:
   - component: {fileID: 3278499795648251954}
   - component: {fileID: 606340846692211697}
   m_Layer: 0
-  m_Name: mesh865919773
+  m_Name: Arm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5459,10 +5459,11 @@ Transform:
   m_GameObject: {fileID: 5191023198791146332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.38, z: 0}
+  m_LocalPosition: {x: -0.05, y: 0.38, z: 0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1745221987062038289}
   m_Father: {fileID: 7550205901148925695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3278499795648251954
@@ -5562,7 +5563,7 @@ GameObject:
   - component: {fileID: 144969427408989273}
   - component: {fileID: 245783521914237382}
   m_Layer: 0
-  m_Name: mesh1022984813
+  m_Name: Leg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5714,6 +5715,7 @@ GameObject:
   - component: {fileID: 8212630446295143490}
   - component: {fileID: 8670949077876873472}
   - component: {fileID: 3136570354376955426}
+  - component: {fileID: 2675507225394392010}
   m_Layer: 0
   m_Name: Water_Goblin
   m_TagString: Enemy
@@ -5735,13 +5737,11 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 307132946616772330}
-  - {fileID: 1745221987062038289}
   - {fileID: 6866382299304074042}
   - {fileID: 6772838566143454101}
   - {fileID: 1347822649792317976}
   - {fileID: 1620957672525849053}
   - {fileID: 6567975486801611107}
-  - {fileID: 939303137312601709}
   - {fileID: 3264225427153990417}
   - {fileID: 3839272893645670274}
   - {fileID: 7705055797723686509}
@@ -5852,6 +5852,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   currentHealth: 0
+--- !u!95 &2675507225394392010
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173223683102241861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b819f7512d7812449caaf7ba0919251, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8560361553574902387
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,7 +5973,7 @@ GameObject:
   - component: {fileID: 529174301546511813}
   - component: {fileID: 81901788109112806}
   m_Layer: 0
-  m_Name: mesh487462878
+  m_Name: Arm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5969,7 +5991,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 939303137312601709}
   m_Father: {fileID: 7550205901148925695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &529174301546511813

@@ -53,6 +53,6 @@ public class BaseHealth : MonoBehaviour
         PlayerPrefs.SetInt("LastWave", waveManager.currentWave);
         PlayerPrefs.SetString("LostLevelName", SceneManager.GetActiveScene().name);
 
-        SceneManager.LoadScene("Loss Menu");
+        SceneManager.LoadScene("Loss Endless");
     }
 }
