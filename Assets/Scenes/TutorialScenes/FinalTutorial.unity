@@ -6601,6 +6601,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4224500297379755077, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
+    - target: {fileID: 4224500297379755077, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1492102119398036954, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
+    - target: {fileID: 4224500297379755077, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4861167419179228662, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 166
