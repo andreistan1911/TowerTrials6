@@ -21,7 +21,7 @@ public class WaveManagerEndless : AbstractWaveManager
     public override void Spawn()
     {
         GetWaveNumberAndIteration(currentWave, out int waveNumber, out int iteration);
-        float hpMultiplier = Mathf.Pow(1.5f, iteration - 1);
+        float hpMultiplier = Mathf.Pow(3.0f, iteration - 1);
 
         StartCoroutine(SpawnWave(enemiesToBeSpawned, false, hpMultiplier));
     }

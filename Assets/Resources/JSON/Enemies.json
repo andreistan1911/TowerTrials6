@@ -2,37 +2,37 @@
   "enemy": [
     {
       "type": "Slime",
-      "health": 15.0,
+      "health": 31.0,
       "speed": 2.0
     },
     {
       "type": "Wolf",
-      "health": 20.0,
+      "health": 50.0,
       "speed": 7.0
     },
     {
       "type": "Goblin",
-      "health": 40.0,
+      "health": 60.0,
       "speed": 3.0
     },
     {
       "type": "Dragon",
-      "health": 40.0,
+      "health": 70.0,
       "speed": 6.0
     },
     {
       "type": "Skeleton",
-      "health": 50.0,
+      "health": 80.0,
       "speed": 3.0
     },
     {
       "type": "Viking",
-      "health": 60.0,
+      "health": 90.0,
       "speed": 5
     },
     {
       "type": "Demon",
-      "health": 80.0,
+      "health": 100.0,
       "speed": 4.0
     },
     {

@@ -6064,7 +6064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440.00012, y: -499}
+  m_AnchoredPosition: {x: -440.00012, y: -477.95}
   m_SizeDelta: {x: 492.7117, y: 82.8039}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193910858
@@ -6087,7 +6087,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use 1, 2 and 3 to change elements
+  m_text: Press 1, 2 or 3 to change between your element. Hold mouse click to use
+    your weapon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
   m_sharedMaterial: {fileID: -1492102119398036954, guid: 4869141366c9a5944be0a9598c367cfb, type: 2}
@@ -8412,6 +8413,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5677513319832231067, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655646366646697883, guid: 9730e2c8867bc6c42aef77f8688f48ac, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -166,7 +166,7 @@ public class TowerPurchaseMenu : MonoBehaviour
         {
             if (purchaseSphere.tower != null)
             {
-                GoldManager.GainGold(Global.towerValues[purchaseSphere.tower.element][purchaseSphere.tower.GetTowerTypeFromName()].cost);
+                GoldManager.GainGold((int)(0.3f * Global.towerValues[purchaseSphere.tower.element][purchaseSphere.tower.GetTowerTypeFromName()].cost));
                 Destroy(purchaseSphere.tower.gameObject.transform.parent.gameObject);
             }
 

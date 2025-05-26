@@ -444,6 +444,18 @@ PrefabInstance:
       propertyPath: m_distance
       value: 3.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7061414364489380208, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061414364489380208, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061414364489380208, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.34934187
+      objectReference: {fileID: 0}
     - target: {fileID: 7788944087801034472, guid: 2c4bce5c9e3b69246b08793ff07b5192, type: 3}
       propertyPath: m_distance
       value: 4.5

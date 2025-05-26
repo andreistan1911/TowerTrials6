@@ -986,24 +986,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "My Dearest Nephew,\n\nI write to you not just as your uncle, but as the
-    keeper of truths you have long forgotten. There is much about your heritage that
-    you do not know, and much you have yet to learn. But it is time now that you
-    understand \u2014 you possess magic.\n\nI\u2019ve watched from afar, ever since
-    you were a child. The signs were there, subtle at first, in the way you could
-    calm the winds with a thought or make the fire in the hearth dance with a flick
-    of your fingers. Perhaps you never noticed. Perhaps you thought it was just luck,
-    or some trick of fate. But no, my dear boy, it is more than that. It is magic,
-    and it runs through your blood.\n\nI will teach you, nephew, but I cannot do
-    so from afar. You must come to me, and you must come prepared. The path ahead
-    will not be easy. The elements are fickle, and they do not reveal themselves
-    to those who seek them with arrogance. They will test you, bend you, and shape
-    you in ways you cannot yet fathom.\n\nThere is a great evil, a wizard whose power
-    grows by the day. He will stop at nothing to see the kingdom fall, and you will
-    need more than courage and a sharp blade to defeat him. You will need mastery
-    over the elements themselves. It is a journey of great danger, but it is a journey
-    you were born for.\n\nCome, and let us begin.\n\nWith patience and wisdom,\nGreat
-    Magistus Galdor Hagrith"
+  m_text: "My Dearest Nephew,\r\n\r\nI write to you not just as your uncle, but as
+    the keeper of truths that you have long forgotten. There is much about your heritage
+    that you do not know, and much you have yet to learn. But it is time now that
+    you understand \u2014 you possess magic.\r\n\r\nI\u2019ve watched from afar,
+    ever since you were a child. The signs were there, subtle at first, in the way
+    you could calm the winds with a thought or make the fire in the hearth dance
+    with a flick of your fingers. Perhaps you never noticed. Perhaps you thought
+    it was just luck, or some trick of fate. But no, my dear boy, it is more than
+    that. It is magic, and it runs through your blood.\r\n\r\nI will teach you, nephew,
+    but I cannot do so from afar. You must come to me, and you must come prepared.
+    The path ahead will not be easy. The elements are fickle, and they do not reveal
+    themselves to those who seek them with arrogance. They will test you, bend you,
+    and shape you in ways you cannot yet fathom.\r\n\r\nThere is a great evil, a
+    wizard whose power grows by the day. He will stop at nothing to see the kingdom
+    fall, and you will need more than courage and a sharp blade to defeat him. You
+    will need mastery over the elements themselves. It is a journey of great danger,
+    but it is a journey you were born for.\r\n\r\nCome, and let us begin.\r\n\r\nWith
+    patience and wisdom,\r\nGreat Magistus Galdor Hagrith"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b9af79bc4d9dddc42a403114f1e21df1, type: 2}
   m_sharedMaterial: {fileID: -2402688137988909503, guid: b9af79bc4d9dddc42a403114f1e21df1, type: 2}
