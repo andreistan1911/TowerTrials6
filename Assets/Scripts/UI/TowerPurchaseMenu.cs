@@ -87,7 +87,7 @@ public class TowerPurchaseMenu : MonoBehaviour
 
         dmg = Global.towerValues[selectedElement][selectedType].damage / Global.maxTowerDamage;
         range = Global.towerValues[selectedElement][selectedType].range / Global.maxTowerRange;
-        atkSpeed = 50 * (1.0f / Global.towerValues[selectedElement][selectedType].attackRate) / Global.maxTowerAtkSpd;
+        atkSpeed = 30f / (Global.maxTowerAtkSpd * Global.towerValues[selectedElement][selectedType].attackRate);
 
         costText.text = $"Cost: {Global.towerValues[selectedElement][selectedType].cost}";
         SetBarFill(dmgBar, dmg);
