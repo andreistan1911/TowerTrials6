@@ -92,7 +92,7 @@ public abstract class AbstractWaveManager : MonoBehaviour
         return $"Prepare for wave {currentWave}:\n" + result.ToString().TrimEnd(); // elimina ultimul newline
     }
 
-    protected IEnumerator SpawnWave(List<EnemySpawnData> enemies, bool isLastWave = false)
+    protected IEnumerator SpawnWave(List<EnemySpawnData> enemies, bool isLastWave = false, float hpMultiplier = 1f)
     {
         WaveStateManager.Instance.OnWaveStarted();
 
@@ -104,6 +104,8 @@ public abstract class AbstractWaveManager : MonoBehaviour
             GameObject enemyInstance = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
             Enemy enemy = enemyInstance.GetComponent<Enemy>();
 
+            enemy.Start();
+            enemy.SetMaxHealth(hpMultiplier * enemy.stats.health);
             enemy.waypoints = waypoints;
 
             yield return new WaitForSeconds(timeBetweenSpawns);

@@ -3,7 +3,7 @@
     {
       "name": "FL",
       "displayName": "Pyrus Voltes",
-      "damage": 20.0,
+      "damage": 10.0,
       "slowValue": 0.0,
       "slowDuration": 0.0,
       "buff": "Aoe"
@@ -11,7 +11,7 @@
     {
       "name": "FW",
       "displayName": "Pyrus Aquas",
-      "damage": 10.0,
+      "damage": 5.0,
       "slowValue": 0.3,
       "slowDuration": 1.0,
       "buff": null
@@ -19,7 +19,7 @@
     {
       "name": "LW",
       "displayName": "Aquas Voltes",
-      "damage": 7.0,
+      "damage": 3.5,
       "slowValue": 1.0,
       "slowDuration": 0.3,
       "buff": "Aoe stun"

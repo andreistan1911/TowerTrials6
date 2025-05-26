@@ -27,12 +27,25 @@ public class BaseHealth : MonoBehaviour
             return;
 
         Destroy(other.gameObject);
-        TakeDamage((int)enemy.type + 1);
+        TakeDamage(GetDamageByType(enemy.type));
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private int GetDamageByType(Global.EnemyType type)
     {
-
+        return type switch
+        {
+            Global.EnemyType.Slime => 1,
+            Global.EnemyType.Wolf => 2,
+            Global.EnemyType.Goblin => 2,
+            Global.EnemyType.Dragon => 2,
+            Global.EnemyType.Skeleton => 3,
+            Global.EnemyType.Viking => 4,
+            Global.EnemyType.Demon => 5,
+            Global.EnemyType.Giant => 5,
+            Global.EnemyType.DragonMama => 10,
+            Global.EnemyType.Wizard => 100,
+            _ => 1,
+        };
     }
 
     private void TakeDamage(int damage)

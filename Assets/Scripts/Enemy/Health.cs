@@ -18,7 +18,25 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        GoldManager.GainGold((int)GetComponent<Enemy>().type + 1);
+        GoldManager.GainGold(GetGoldByType(GetComponent<Enemy>().type));
         Destroy(gameObject);
+    }
+
+    private int GetGoldByType(Global.EnemyType type)
+    {
+        return type switch
+        {
+            Global.EnemyType.Slime => 1,
+            Global.EnemyType.Wolf => 2,
+            Global.EnemyType.Goblin => 2,
+            Global.EnemyType.Dragon => 3,
+            Global.EnemyType.Skeleton => 4,
+            Global.EnemyType.Viking => 4,
+            Global.EnemyType.Demon => 5,
+            Global.EnemyType.Giant => 5,
+            Global.EnemyType.DragonMama => 20,
+            Global.EnemyType.Wizard => 30,
+            _ => 1,
+        };
     }
 }

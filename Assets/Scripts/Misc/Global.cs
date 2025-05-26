@@ -22,7 +22,7 @@ public class Global : ScriptableObject
     public static float g = 9.81f;
     public static float eps = 0.001f;
 
-    public const float VIEW_ANGLE = 10f;
+    public const float VIEW_ANGLE = 30f;
 
     public static float maxTowerDamage = 0;
     public static float maxTowerAtkSpd = 0;

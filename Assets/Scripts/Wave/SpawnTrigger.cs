@@ -8,12 +8,10 @@ public class SpawnTrigger : MonoBehaviour
     public GameObject towerPurchaseZones;
 
     private Collider triggerCollider;
-    private MeshRenderer meshRenderer;
 
     private void Start()
     {
         triggerCollider = GetComponent<Collider>();
-        meshRenderer = GetComponent<MeshRenderer>();
 
         Assert.IsNotNull(waveManager);
         Assert.IsNotNull(towerPurchaseZones);

@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     private Health health;
     private ElementalOutline outline;
 
-    private void Start()
+    public void Start()
     {
         InitializeComponents();
         InitializeStats();
@@ -75,6 +75,12 @@ public class Enemy : MonoBehaviour
             Debug.LogError($"{name} is missing NavMeshAgent!");
 
     }
+
+    public void SetMaxHealth(float newHealth)
+    {
+        health.maxHealth = newHealth;
+        health.currentHealth = newHealth;
+    }
     #endregion
 
     #region Movement
@@ -87,8 +93,14 @@ public class Enemy : MonoBehaviour
 
         float distance = Vector3.Distance(waypoints[currentWaypoint].transform.position, transform.position);
 
-        if (distance < 1.5f)
-            currentWaypoint = (currentWaypoint + 1) % waypoints.Count;
+        if (type == Global.EnemyType.Giant)
+        {
+            if (distance < 3.0f)
+                currentWaypoint = (currentWaypoint + 1) % waypoints.Count;
+        }
+        else
+            if (distance < 1.5f)
+               currentWaypoint = (currentWaypoint + 1) % waypoints.Count;
     }
     #endregion
 

@@ -44,8 +44,6 @@ public class WaveStateManager : MonoBehaviour
     public void OnWaveStarted()
     {
         CurrentPhase = WavePhase.DuringWaveTime;
-
-        Debug.Log("Wave started");
     }
 
     public void OnAllEnemiesDefeated()
@@ -55,8 +53,6 @@ public class WaveStateManager : MonoBehaviour
         waveManager.SetANewWave();
         if (nextWaveImage != null)
             nextWaveImage.SetActive(true);
-
-        Debug.Log("All enemies defeated");
     }
 
     public void OnLastWaveEnded()
@@ -64,7 +60,5 @@ public class WaveStateManager : MonoBehaviour
         CurrentPhase = WavePhase.AfterLastWave;
 
         Global.HandleWin(winCode);
-
-        Debug.Log("Last wave ended");
     }
 }
