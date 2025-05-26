@@ -27021,8 +27021,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FW: {fileID: 311935264417152814, guid: bc171f29e4dbabc489b7eeeae4119720, type: 3}
-  LW: {fileID: 311935264417152814, guid: bc171f29e4dbabc489b7eeeae4119720, type: 3}
-  FL: {fileID: 311935264417152814, guid: bc171f29e4dbabc489b7eeeae4119720, type: 3}
+  LW: {fileID: 311935264417152814, guid: 5ca623327b23a0a4cb3bebe4f7cd56f2, type: 3}
+  FL: {fileID: 311935264417152814, guid: 5ca623327b23a0a4cb3bebe4f7cd56f2, type: 3}
 --- !u!4 &1719014665
 Transform:
   m_ObjectHideFlags: 0
@@ -31551,6 +31551,10 @@ PrefabInstance:
     - target: {fileID: 8308814466964294468, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680535863584454327, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_text
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

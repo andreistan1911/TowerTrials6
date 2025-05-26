@@ -2,53 +2,53 @@
   "enemy": [
     {
       "type": "Slime",
-      "health": 80.0,
-      "speed": 2.5
+      "health": 15.0,
+      "speed": 2.0
     },
     {
       "type": "Wolf",
-      "health": 50.0,
-      "speed": 9.0
+      "health": 20.0,
+      "speed": 7.0
     },
     {
       "type": "Goblin",
-      "health": 100.0,
-      "speed": 4.0
-    },
-    {
-      "type": "Dragon",
-      "health": 100.0,
-      "speed": 5.0
-    },
-    {
-      "type": "Skeleton",
-      "health": 200.0,
-      "speed": 3.5
-    },
-    {
-      "type": "Viking",
-      "health": 300.0,
-      "speed": 3.5
-    },
-    {
-      "type": "Demon",
-      "health": 400.0,
+      "health": 40.0,
       "speed": 3.0
     },
     {
+      "type": "Dragon",
+      "health": 40.0,
+      "speed": 6.0
+    },
+    {
+      "type": "Skeleton",
+      "health": 50.0,
+      "speed": 3.0
+    },
+    {
+      "type": "Viking",
+      "health": 60.0,
+      "speed": 5
+    },
+    {
+      "type": "Demon",
+      "health": 80.0,
+      "speed": 4.0
+    },
+    {
       "type": "Giant",
-      "health": 600.0,
+      "health": 100.0,
       "speed": 2.0
     },
     {
       "type": "DragonMama",
-      "health": 1000.0,
-      "speed": 1.0
+      "health": 500.0,
+      "speed": 2.0
     },
     {
       "type": "Wizard",
-      "health": 1200.0,
-      "speed": 1.5
+      "health": 600.0,
+      "speed": 3.0
     }
   ]
 }
