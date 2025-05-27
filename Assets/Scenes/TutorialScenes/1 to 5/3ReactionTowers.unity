@@ -2279,6 +2279,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 834020346010515034, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28acdb6ffe530894b87636376dddb1fd, type: 3}
     - target: {fileID: 1323605015141129888, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2367,6 +2371,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3334748199625790884, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28acdb6ffe530894b87636376dddb1fd, type: 3}
+    - target: {fileID: 8238685860644623754, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28acdb6ffe530894b87636376dddb1fd, type: 3}
     - target: {fileID: 8680535863584454327, guid: cebe81f975ffeb549ab6cab0128a5599, type: 3}
       propertyPath: m_text
       value: 1000
